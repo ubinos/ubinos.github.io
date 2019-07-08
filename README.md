@@ -2,6 +2,7 @@ Projects
 
 * ubinos core projects
     + ubinos
+        - [API online help](api/ubinos/html)
 
 * ubinos basic example projects
     + myapp
