@@ -1,27 +1,30 @@
+![underconstruction](image/underconstruction.png)
+
 Projects
 
-* ubinos core projects
+* [Getting Started Guide](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/77561861/Getting+Started+Guide?atlOrigin=eyJpIjoiYjAxZmVlZGVkNjkyNDMzMGJkNzJjYmZkY2I0YTJmMWIiLCJwIjoiYyJ9)
+
+* Ubinos Core Projects
     + ubinos
         - [API online help](api/ubinos/html)
+    + ubiworks
 
-* ubinos basic example projects
+* Ubinos Basic Example Projects
     + myapp
     + mylib
     + mylibapp
-    + myappsa
     + myworks
+    + myappworks
 
-* ubinos works projects
-    + ubiworks
-
-* ubinos board specific projects
+* Ubinos Board Specific Projects
     + nrf5sdk
     + nrf5example
+    + nrf5works
 
-* ubinos document projects
+* Ubinos Document Projects
     + ubinos.github.io
 
 Community
 
-* [ubinos.slack.com](https://ubinos.slack.com)
+* [Ubinos Slack](https://ubinos.slack.com)
 
