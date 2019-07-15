@@ -11,13 +11,13 @@
 
 
 * Core Projects 핵심 프로젝트
-    + ubinos
+    + [ubinos](https://github.com/ubinos/ubinos)
         - [API Online Help](api/ubinos/html)
     + ubiworks
 
 
 
-* Board Specific Projects 특정 보드용 프로젝트
+* Board Specific Projects 특정 보드 고유 프로젝트
     + nRF52 DK (PCA10040)
         - nrf5sdk
         - nrf5example
@@ -40,5 +40,5 @@
 
 
 * Developer Group 개발자 모임
-    + [Ubinos Slack](https://ubinos.slack.com)
+    + [ubinos.slack.com](https://ubinos.slack.com)
 
