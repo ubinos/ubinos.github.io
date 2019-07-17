@@ -22,6 +22,10 @@
 
 <br/>
 
+*  [Project Source Tree Structure 프로젝트 소스 트리 구조](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/78971266/Project+Source+Tree+Structure?atlOrigin=eyJpIjoiMDUyNmI3YzNmMWE0NGZiMmFmNTZlZjQ0OWEyZWFhYWYiLCJwIjoiYyJ9)
+
+<br/>
+
 * Core Projects 핵심 프로젝트
     + [ubinos](https://github.com/ubinos/ubinos)
         - [API Online Help](api/ubinos/html)
@@ -33,16 +37,26 @@
     + nRF52 DK (PCA10040)
         - nrf5sdk
         - nrf5example
-        - nrf5works
 
 <br/>
 
-* Simple Project Examples 간단한 프로젝트 예
-    + myapp
-    + mylib
-    + mylibapp
-    + myworks
-    + myappworks
+* Source Tree Example Projects 소스 트리 예제 프로젝트
+    + [exprjworks](https://github.com/ubinos/exprjworks)
+        - Example Project of Workspace Type Source Tree 워크스페이스 형식 소스 트리 예제 프로젝트
+    + [exprjappworks](https://github.com/ubinos/exprjappworks)
+        - Example Project of Workspace including Application Type Source Tree 응용을 포함한 워크스페이스 형식 소스 트리 예제 프로젝트
+    + [exprjlib](https://github.com/ubinos/exprjlib)
+        - Example Project of Library Type Source Tree 라이브러리 형식 소스 트리 예제 프로젝트
+    + [exprjapp](https://github.com/ubinos/exprjapp)
+        - Example Project of Application Type Source Tree 응용 형식 소스 트리 예제 프로젝트
+    + [exprjlibapp](https://github.com/ubinos/exprjlibapp)
+        - Example Project of Library including Application Type Source Tree 응용을 포함한 라이브러리 형식 소스 트리 예제 프로젝트
+
+<br/>
+
+* Example Projects 예제 프로젝트
+    + ex01
+    + ex02
 
 <br/>
 
