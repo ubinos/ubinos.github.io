@@ -18,10 +18,6 @@
 
 <br/>
 
-### [Source Tree Structure 소스 트리 구조](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/78971266/Project+Source+Tree+Structure?atlOrigin=eyJpIjoiMDUyNmI3YzNmMWE0NGZiMmFmNTZlZjQ0OWEyZWFhYWYiLCJwIjoiYyJ9)
-
-<br/>
-
 ### [Coding Conventions 코딩 규칙](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/78905345/Coding+Conventions?atlOrigin=eyJpIjoiNzA4YjM1ZmYyODAzNGFmYjgyZjY5MjU4YTNiYjU1YjIiLCJwIjoiYyJ9)
 
 <br/>
