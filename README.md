@@ -1,38 +1,29 @@
-
 <br/>
 
 ### [Introduction 소개](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/77463585/Introduction?atlOrigin=eyJpIjoiZWI1MDgxYjVjY2Y3NGI5YWIyMGRmNGYxNTJhODY0YTEiLCJwIjoiYyJ9)
-
 <br/>
 
 ### [Getting Started Guide 시작 안내서](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/77561861/Getting+Started+Guide?atlOrigin=eyJpIjoiYjAxZmVlZGVkNjkyNDMzMGJkNzJjYmZkY2I0YTJmMWIiLCJwIjoiYyJ9)
-
 <br/>
 
 ### [Creating My Project 내 프로젝트 생성하기](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/78610672/Creating+My+Project?atlOrigin=eyJpIjoiNTlhOGE0MDlmMDQwNGJmYWJjZThiODllNTVjZDk0ZWQiLCJwIjoiYyJ9)
-
 <br/>
 
 ### [Creating My Project from Scratch 내 프로젝트 수동으로 생성하기](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/78741669/Creating+My+Project+from+Scratch?atlOrigin=eyJpIjoiNTlhOGE0MDlmMDQwNGJmYWJjZThiODllNTVjZDk0ZWQiLCJwIjoiYyJ9)
-
 <br/>
 
 ### [Developing with Eclipse 이클립스로 개발하기](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/79298594/Developing+with+Eclipse?atlOrigin=eyJpIjoiMWQ0NzM5ZWI3YjQ5NDBkNTliN2RmNjJjMjFiYjA4NzQiLCJwIjoiYyJ9)
-
 <br/>
 
 ### [Source Tree Structure 소스 트리 구조](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/78971266/Project+Source+Tree+Structure?atlOrigin=eyJpIjoiMDUyNmI3YzNmMWE0NGZiMmFmNTZlZjQ0OWEyZWFhYWYiLCJwIjoiYyJ9)
-
 <br/>
 
 ### [Coding Conventions 코딩 규칙](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/78905345/Coding+Conventions?atlOrigin=eyJpIjoiNzA4YjM1ZmYyODAzNGFmYjgyZjY5MjU4YTNiYjU1YjIiLCJwIjoiYyJ9)
-
 <br/>
 
 ### Developer Group 개발자 모임
 
 * [ubinos.slack.com](https://ubinos.slack.com)
-
 <br/>
 
 ### Related Projects 관련 프로젝트
@@ -66,6 +57,4 @@
 #### Document Projects 문서 프로젝트
 
 * [ubinos.github.io](https://github.com/ubinos/ubinos.github.io)
-
-<br/>
 
