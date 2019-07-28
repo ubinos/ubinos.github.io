@@ -46,14 +46,13 @@
 
 #### Example Projects 예제 프로젝트
 
-* ex01
-* ex02
+* [ex01](https://github.com/ubinos/ex01)
 
 #### Board Specific Projects 특정 보드 고유 프로젝트
 
 ##### nRF52 DK (PCA10040)
 
-* nrf5sdk
+* nrf5sdkw
 * nrf5example
 
 #### Document Projects 문서 프로젝트
