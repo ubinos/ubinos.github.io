@@ -34,7 +34,7 @@
 
 * [ubinos](https://github.com/ubinos/ubinos)
     + [API Online Help](api/ubinos/html)
-* ubiworks
+* [ubiworks](https://github.com/ubinos/ubiworks)
 
 #### Source Tree Example Projects 소스 트리 예제 프로젝트
 
@@ -52,8 +52,8 @@
 
 ##### nRF52 DK (PCA10040)
 
-* nrf5sdkw
-* nrf5example
+* [nrf5sdk](https://github.com/ubinos/nrf5sdk)
+* [nrf5example](https://github.com/ubinos/nrf5example)
 
 #### Document Projects 문서 프로젝트
 
