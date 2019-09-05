@@ -9,6 +9,11 @@ def print_help():
     print("Usage:")
     print("    python %s <base project name> <new project name>" % (sys.argv[0]))
     print("        ex: python %s ex01 myapp01" % (sys.argv[0]))
+    print("")
+    print("    Base Projects")
+    print("        * ex01: Basic Example for All Boards")
+    print("        * ex02nrf5: Basic Example for nRF5 Family Boards")
+    print("")
     print("===============================================================================")
 
 def mkubiprj(basename, newname):

@@ -33,7 +33,6 @@
 #### Core Projects 핵심 프로젝트
 
 * [ubinos](https://github.com/ubinos/ubinos)
-    + [API Online Help](api/ubinos/html)
 * [ubiworks](https://github.com/ubinos/ubiworks)
 
 #### Source Tree Example Projects 소스 트리 예제 프로젝트
@@ -47,13 +46,14 @@
 #### Example Projects 예제 프로젝트
 
 * [ex01](https://github.com/ubinos/ex01)
+* [ex02nrf5](https://github.com/ubinos/ex02nrf5)
 
 #### Board Specific Projects 특정 보드 고유 프로젝트
 
-##### nRF52 DK (PCA10040)
+##### [Projects for Nordic nRF5 Family Boards 노르딕 nRF5 계열 보드를 위한 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/89719034/Projects+for+Nordic+nRF5+Family+Boards?atlOrigin=eyJpIjoiOGE5ODFhZmVlYzNlNGJiNWEwMDRjNmJhYzM4ZmY4NzQiLCJwIjoiYyJ9)
 
-* [nrf5sdk](https://github.com/ubinos/nrf5sdk)
-* [nrf5example](https://github.com/ubinos/nrf5example)
+* nrf5sdk
+* nrf5example
 
 #### Document Projects 문서 프로젝트
 
