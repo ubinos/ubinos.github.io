@@ -33,7 +33,7 @@
 * ubinos
 * ubiworks
 
-#### [Source Tree Structure Example Projects 소스 트리 구조 예제 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90865709/Source+Tree+Structure+Example+Projects?atlOrigin=eyJpIjoiNTBlZTgzODc0MjZkNGZiOWJjZTJhMmMwNTI4NzA5YmMiLCJwIjoiYyJ9)
+#### [Project Type Example Projects 프로젝트 형식 예제 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90833097/Project+Type+Example+Projects?atlOrigin=eyJpIjoiMTUyMzBhZGU0MzUzNGI2YzlmY2UyNzRhZTRmMzA3MTQiLCJwIjoiYyJ9)
 
 * exprjlib
 * exprjapp
