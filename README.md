@@ -30,23 +30,23 @@
 
 ### Related Projects 관련 프로젝트
 
-#### Core Projects 핵심 프로젝트
+#### [Core Projects 핵심 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90374145/Core+Projects?atlOrigin=eyJpIjoiNjc2M2M5ZGUwOWU4NDg3MWI3NzIzNGNjMDYzZWUwYjAiLCJwIjoiYyJ9)
 
-* [ubinos](https://github.com/ubinos/ubinos)
-* [ubiworks](https://github.com/ubinos/ubiworks)
+* ubinos
+* ubiworks
 
-#### Source Tree Example Projects 소스 트리 예제 프로젝트
+#### [Source Tree Example Projects 소스 트리 예제 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90734593/Source+Tree+Example+Projects?atlOrigin=eyJpIjoiOGM2YjBmNDI3ZGQxNGUxYWIxYjQ3MjQ1NmVmZDE3NTAiLCJwIjoiYyJ9)
 
-* [exprjworks](https://github.com/ubinos/exprjworks)
-* [exprjappworks](https://github.com/ubinos/exprjappworks)
-* [exprjlib](https://github.com/ubinos/exprjlib)
-* [exprjapp](https://github.com/ubinos/exprjapp)
-* [exprjlibapp](https://github.com/ubinos/exprjlibapp)
+* exprjlib
+* exprjapp
+* exprjlibapp
+* exprjworks
+* exprjappworks
 
-#### Example Projects 예제 프로젝트
+#### [Example Projects 예제 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90439691/Example+Projects?atlOrigin=eyJpIjoiOGM2YjBmNDI3ZGQxNGUxYWIxYjQ3MjQ1NmVmZDE3NTAiLCJwIjoiYyJ9)
 
-* [ex01](https://github.com/ubinos/ex01)
-* [ex02nrf5](https://github.com/ubinos/ex02nrf5)
+* ex01
+* ex02nrf5
 
 #### [Projects for Nordic nRF5 Family Boards 노르딕 nRF5 계열 보드를 위한 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/89719034/Projects+for+Nordic+nRF5+Family+Boards?atlOrigin=eyJpIjoiOGE5ODFhZmVlYzNlNGJiNWEwMDRjNmJhYzM4ZmY4NzQiLCJwIjoiYyJ9)
 
