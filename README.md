@@ -22,9 +22,7 @@
 
 <br/>
 
-### Developer Group 개발자 모임
-
-* [ubinos.slack.com](https://ubinos.slack.com)
+### [Project Type 프로젝트 형식](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90767425/Project+Type?atlOrigin=eyJpIjoiOWI5ZDk1NTZkMzZhNDI3ZmE4ZmI0ZjViMTBlYjJkMGQiLCJwIjoiYyJ9)
 
 <br/>
 
@@ -35,7 +33,7 @@
 * ubinos
 * ubiworks
 
-#### [Source Tree Example Projects 소스 트리 예제 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90734593/Source+Tree+Example+Projects?atlOrigin=eyJpIjoiOGM2YjBmNDI3ZGQxNGUxYWIxYjQ3MjQ1NmVmZDE3NTAiLCJwIjoiYyJ9)
+#### [Source Tree Structure Example Projects 소스 트리 구조 예제 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90865709/Source+Tree+Structure+Example+Projects?atlOrigin=eyJpIjoiNTBlZTgzODc0MjZkNGZiOWJjZTJhMmMwNTI4NzA5YmMiLCJwIjoiYyJ9)
 
 * exprjlib
 * exprjapp
@@ -58,4 +56,9 @@
 * [ubinos.github.io](https://github.com/ubinos/ubinos.github.io)
 
 <br/>
+
+### Developer Group 개발자 모임
+
+* [ubinos.slack.com](https://ubinos.slack.com)
+
 
