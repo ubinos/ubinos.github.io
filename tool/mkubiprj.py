@@ -63,10 +63,10 @@ def mkubiprj(basename, newname):
     os.system(cmd)
     print("")
 
-    cmd = ("git commit -m \"Create project \\\"%s\\\" based on \\\"%s\\\"\"" %(newname, basename))
-    print(cmd)
-    os.system(cmd)
-    print("")
+    #cmd = ("git commit -m \"Create project \\\"%s\\\" based on \\\"%s\\\"\"" %(newname, basename))
+    #print(cmd)
+    #os.system(cmd)
+    #print("")
 
 if __name__ == '__main__':
     if 3 > len(sys.argv):
