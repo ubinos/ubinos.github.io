@@ -13,11 +13,15 @@ def print_help():
     print("    Base Projects")
     print("        * ex01: Basic Example for All Boards")
     print("        * ex02nrf5: Basic Example for nRF5 Family Boards")
+    print("        * ex03stm32f2: Basic Example for STM32F2 Family Boards")
     print("")
     print("===============================================================================")
 
-def mkubiprj(basename, newname):
-    cmd = ("git clone https://github.com/ubinos/%s.git %s" % (basename, newname))
+def mkubiprj(basename, newname, repobase):
+    if "" == repobase:
+        repobase = "https://github.com/ubinos"
+        
+    cmd = ("git clone %s/%s.git %s" % (repobase, basename, newname))
     print(cmd)
     os.system(cmd)
     os.chdir(newname)
@@ -69,8 +73,10 @@ def mkubiprj(basename, newname):
     #print("")
 
 if __name__ == '__main__':
-    if 3 > len(sys.argv):
-        print_help()
+    if 3 == len(sys.argv):
+        mkubiprj(sys.argv[1], sys.argv[2], "")
+    elif 4 == len(sys.argv):
+        mkubiprj(sys.argv[1], sys.argv[2], sys.argv[3])
     else:
-        mkubiprj(sys.argv[1], sys.argv[2])
+        print_help()
 
