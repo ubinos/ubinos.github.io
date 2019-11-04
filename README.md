@@ -45,15 +45,25 @@
 
 * ex01
 * ex02nrf5
+* ex03stm32f2
 
 #### [Projects for Nordic nRF5 Family Boards 노르딕 nRF5 계열 보드를 위한 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/89719034/Projects+for+Nordic+nRF5+Family+Boards?atlOrigin=eyJpIjoiOGE5ODFhZmVlYzNlNGJiNWEwMDRjNmJhYzM4ZmY4NzQiLCJwIjoiYyJ9)
 
 * nrf5sdk
 * nrf5example
 
+#### [Projects for ST STM32F2 Family Boards 에스티 STM32F2 계열 보드를 위한 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/95027248/Projects+for+STMicroelectronics+STM32F2+Family+Boards+STM32F2?atlOrigin=eyJpIjoiMzdiMTg2OWU3YzQ1NDhjZTk0MjBhNWIzOWE4MzlkZDkiLCJwIjoiYyJ9)
+
+* stm32cubef2
+* stm32f2example
+
 #### Document Projects 문서 프로젝트
 
 * [ubinos.github.io](https://github.com/ubinos/ubinos.github.io)
+
+<br/>
+
+### [Supported Board 지원하는 보드](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/79593912/Supported+Board?atlOrigin=eyJpIjoiZjFiYTIxZWM4OWI0NGUxOGJhNjVkMzYyODA5N2FjMmMiLCJwIjoiYyJ9)
 
 <br/>
 
