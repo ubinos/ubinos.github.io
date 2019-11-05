@@ -67,6 +67,10 @@
 
 <br/>
 
+### [Release Note 릴리즈 노트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/95092761/Release+Note?atlOrigin=eyJpIjoiMTZiYjRmOGY0ZmFiNGJkZWI0NDEyYTQ2OTg0NTllODAiLCJwIjoiYyJ9)
+
+<br/>
+
 ### Developer Group 개발자 모임
 
 * [ubinos.slack.com](https://ubinos.slack.com)
