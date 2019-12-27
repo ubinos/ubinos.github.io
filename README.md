@@ -52,7 +52,7 @@
 * nrf5sdk
 * nrf5example
 
-#### [Projects for ST STM32F2 Family Boards 에스티 STM32F2 계열 보드를 위한 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/95027248/Projects+for+STMicroelectronics+STM32F2+Family+Boards+STM32F2?atlOrigin=eyJpIjoiMzdiMTg2OWU3YzQ1NDhjZTk0MjBhNWIzOWE4MzlkZDkiLCJwIjoiYyJ9)
+#### [Projects for ST STM32F2 Family Boards 에스티 STM32F2 계열 보드를 위한 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/114032664/Projects+for+ST+STM32F2+Family+Boards?atlOrigin=eyJpIjoiNjg5MGFmMjlkMjZkNDk3NWE3MWFiN2JjMzU1NTg0NjkiLCJwIjoiYyJ9)
 
 * stm32cubef2
 * stm32f2example
