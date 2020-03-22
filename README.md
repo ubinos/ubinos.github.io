@@ -25,16 +25,13 @@
 ### [Project Type 프로젝트 형식](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90767425/Project+Type?atlOrigin=eyJpIjoiOWI5ZDk1NTZkMzZhNDI3ZmE4ZmI0ZjViMTBlYjJkMGQiLCJwIjoiYyJ9)
 
 <br/>
-
-### [Ubinos API Help 유비노스 API 도움말](api/ubinos/html)
-
-<br/>
  
 ### Related Projects 관련 프로젝트
 
 #### [Core Projects 핵심 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90374145/Core+Projects?atlOrigin=eyJpIjoiNjc2M2M5ZGUwOWU4NDg3MWI3NzIzNGNjMDYzZWUwYjAiLCJwIjoiYyJ9)
 
 * ubinos
+    - [Ubinos API Help 유비노스 API 도움말](api/ubinos/html)
 * ubiworks
 
 #### [Project Type Example Projects 프로젝트 형식 예제 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90833097/Project+Type+Example+Projects?atlOrigin=eyJpIjoiMTUyMzBhZGU0MzUzNGI2YzlmY2UyNzRhZTRmMzA3MTQiLCJwIjoiYyJ9)
