@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ubinos: /Users/siminsungho/Workspace/sonamu/ubinos/ubiworks_ext/library/ubinos/include/ubinos/ubiclib/stdlib.h Source File</title>
+<title>ubinos: /Users/siminsungho/Workspace/sonamu/ubinos/ubiworks_ext/library/ubinos/include/ubinos/ubiclib/cli.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,10 +66,10 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">stdlib.h</div>  </div>
+<div class="title">cli.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="stdlib_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="cli_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> Copyright (C) 2009 Sung Ho Park</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> Contact: ubinos.org@gmail.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
@@ -98,30 +98,42 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> terms contained in a written agreement between you and rightful owner.</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef UBICLIB_STDLIB_H_</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define UBICLIB_STDLIB_H_</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef UBICLIB_CLI_H_</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define UBICLIB_CLI_H_</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;ubinos_config.h&gt;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="type_8h.html">ubinos/type.h</a>&gt;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdlib_8h.html#a68d33867c27ef51123bac924c44880ca">stdlib_port_comp_init</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdlib_8h.html#aa2b78d2dd31b33137f15743b4fae81b6">stdlib_port_comp_init_reent</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* UBICLIB_STDLIB_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifdef  __cplusplu</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;ubinos_config.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="type_8h.html">ubinos/type.h</a>&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="cli_8h.html#ab105bde58217057fab1e535fced2186a">   49</a></span>&#160;<span class="keyword">typedef</span> int (*<a class="code" href="cli_8h.html#ab105bde58217057fab1e535fced2186a">cli_hookfunc_ft</a>)(<span class="keywordtype">char</span> *str, <span class="keywordtype">int</span> <a class="code" href="ubiclib_8h.html#affe776513b24d84b39af8ab0930fef7f">max</a>, <span class="keywordtype">void</span> *arg);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="cli_8h.html#a73d5af1a4fe7e89095d8b6e2e613b67f">   52</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="cli_8h.html#a73d5af1a4fe7e89095d8b6e2e613b67f">cli_helphookfunc_ft</a>)();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">int</span> <a class="code" href="cli_8h.html#a13a3eee09dd5e6af5733422fd2994d82">cli_sethookfunc</a>(<a class="code" href="cli_8h.html#ab105bde58217057fab1e535fced2186a">cli_hookfunc_ft</a> hookfunc, <span class="keywordtype">void</span> *arg);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">int</span> <a class="code" href="cli_8h.html#a9bc09a8d8cf1763e61723031f4fe5328">cli_sethelphookfunc</a>(<a class="code" href="cli_8h.html#a73d5af1a4fe7e89095d8b6e2e613b67f">cli_helphookfunc_ft</a> helphookfunc);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">int</span> <a class="code" href="cli_8h.html#a02714b96b8a0726837a7dcadacc4d38b">cli_setprompt</a>(<span class="keywordtype">char</span> *prompt);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cli_8h.html#a7fd8f2b46cfb05031169a9b72c262e88">cli_main</a>(<span class="keywordtype">void</span> *arg);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* UBICLIB_CLI_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astdlib_8h_html_aa2b78d2dd31b33137f15743b4fae81b6"><div class="ttname"><a href="stdlib_8h.html#aa2b78d2dd31b33137f15743b4fae81b6">stdlib_port_comp_init_reent</a></div><div class="ttdeci">int stdlib_port_comp_init_reent(void)</div></div>
+<div class="ttc" id="acli_8h_html_a13a3eee09dd5e6af5733422fd2994d82"><div class="ttname"><a href="cli_8h.html#a13a3eee09dd5e6af5733422fd2994d82">cli_sethookfunc</a></div><div class="ttdeci">int cli_sethookfunc(cli_hookfunc_ft hookfunc, void *arg)</div></div>
+<div class="ttc" id="acli_8h_html_a02714b96b8a0726837a7dcadacc4d38b"><div class="ttname"><a href="cli_8h.html#a02714b96b8a0726837a7dcadacc4d38b">cli_setprompt</a></div><div class="ttdeci">int cli_setprompt(char *prompt)</div></div>
+<div class="ttc" id="acli_8h_html_a7fd8f2b46cfb05031169a9b72c262e88"><div class="ttname"><a href="cli_8h.html#a7fd8f2b46cfb05031169a9b72c262e88">cli_main</a></div><div class="ttdeci">void cli_main(void *arg)</div></div>
+<div class="ttc" id="acli_8h_html_ab105bde58217057fab1e535fced2186a"><div class="ttname"><a href="cli_8h.html#ab105bde58217057fab1e535fced2186a">cli_hookfunc_ft</a></div><div class="ttdeci">int(* cli_hookfunc_ft)(char *str, int max, void *arg)</div><div class="ttdef"><b>Definition:</b> cli.h:49</div></div>
 <div class="ttc" id="atype_8h_html"><div class="ttname"><a href="type_8h.html">type.h</a></div><div class="ttdoc">ubinos basic data type</div></div>
-<div class="ttc" id="astdlib_8h_html_a68d33867c27ef51123bac924c44880ca"><div class="ttname"><a href="stdlib_8h.html#a68d33867c27ef51123bac924c44880ca">stdlib_port_comp_init</a></div><div class="ttdeci">int stdlib_port_comp_init(void)</div></div>
+<div class="ttc" id="aubiclib_8h_html_affe776513b24d84b39af8ab0930fef7f"><div class="ttname"><a href="ubiclib_8h.html#affe776513b24d84b39af8ab0930fef7f">max</a></div><div class="ttdeci">#define max(a, b)</div><div class="ttdef"><b>Definition:</b> ubiclib.h:257</div></div>
+<div class="ttc" id="acli_8h_html_a9bc09a8d8cf1763e61723031f4fe5328"><div class="ttname"><a href="cli_8h.html#a9bc09a8d8cf1763e61723031f4fe5328">cli_sethelphookfunc</a></div><div class="ttdeci">int cli_sethelphookfunc(cli_helphookfunc_ft helphookfunc)</div></div>
+<div class="ttc" id="acli_8h_html_a73d5af1a4fe7e89095d8b6e2e613b67f"><div class="ttname"><a href="cli_8h.html#a73d5af1a4fe7e89095d8b6e2e613b67f">cli_helphookfunc_ft</a></div><div class="ttdeci">void(* cli_helphookfunc_ft)()</div><div class="ttdef"><b>Definition:</b> cli.h:52</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

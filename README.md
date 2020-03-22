@@ -26,6 +26,10 @@
 
 <br/>
 
+### [Ubinos API Help 유비노스 API 도움말](api/ubinos/html)
+
+<br/>
+ 
 ### Related Projects 관련 프로젝트
 
 #### [Core Projects 핵심 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90374145/Core+Projects?atlOrigin=eyJpIjoiNjc2M2M5ZGUwOWU4NDg3MWI3NzIzNGNjMDYzZWUwYjAiLCJwIjoiYyJ9)
@@ -56,6 +60,11 @@
 
 * stm32cubef2
 * stm32f2example
+
+#### [Projects for SEGGER Development Tools 세거 개발 도구를 위한 프로젝트](https://sonamu.atlassian.net/l/c/orG7PAha)
+
+* seggerrtt
+* seggerrtt_wrapper
 
 #### Document Projects 문서 프로젝트
 
