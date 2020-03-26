@@ -31,7 +31,7 @@
 #### [Core Projects 핵심 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90374145/Core+Projects?atlOrigin=eyJpIjoiNjc2M2M5ZGUwOWU4NDg3MWI3NzIzNGNjMDYzZWUwYjAiLCJwIjoiYyJ9)
 
 * ubinos
-    - [Ubinos API Help 유비노스 API 도움말](api/ubinos/html)
+    - [Ubinos API Help](api/ubinos/html)
 * ubiworks
 
 #### [Project Type Example Projects 프로젝트 형식 예제 프로젝트](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/90833097/Project+Type+Example+Projects?atlOrigin=eyJpIjoiMTUyMzBhZGU0MzUzNGI2YzlmY2UyNzRhZTRmMzA3MTQiLCJwIjoiYyJ9)
@@ -80,5 +80,13 @@
 ### Developer Group 개발자 모임
 
 * [ubinos.slack.com](https://ubinos.slack.com)
+
+<br/>
+
+---
+
+<br/>
+
+### [Group System 그룹 시스템](https://sonamu.atlassian.net/l/c/Q2zd0Bdg)
 
 
