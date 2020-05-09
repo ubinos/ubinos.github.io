@@ -31,6 +31,8 @@ def mkubiprj(basename, newname, repobase):
     for dname in dlist:
         flist = glob.glob("./%s/*" % dname)
         for fname in flist:
+            if (os.path.isdir(fname)):
+                continue
             print("modify %s" % fname)
             fin = open(fname, "rt")
             data = fin.read()
