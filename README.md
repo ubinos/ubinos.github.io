@@ -77,6 +77,10 @@
 
 <br/>
 
+### [Development Tips 기발 팁](https://sonamu.atlassian.net/l/c/3H7s1HEp)
+
+<br/>
+
 ### Developer Group 개발자 모임
 
 * [ubinos.slack.com](https://ubinos.slack.com)
