@@ -67,8 +67,8 @@
 
 #### [Projects for SEGGER Development Tools 세거 개발 도구를 위한 프로젝트](https://sonamu.atlassian.net/l/c/orG7PAha)
 
-* seggerrtt
 * seggerrtt_wrapper
+* seggerrtt
 
 #### Document Projects 문서 프로젝트
 
