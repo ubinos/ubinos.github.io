@@ -92,12 +92,6 @@
 
 <br/>
 
-### Developer Group 개발자 모임
-
-* [ubinos.slack.com](https://ubinos.slack.com)
-
-<br/>
-
 ---
 
 <br/>
