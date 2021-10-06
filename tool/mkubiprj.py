@@ -7,7 +7,7 @@ import glob
 def print_help():
     print("===============================================================================")
     print("Usage:")
-    print("    python %s <base project name> <new project name>" % (sys.argv[0]))
+    print("    python %s <base project name> <new project name> (<branch> (<repobase>))" % (sys.argv[0]))
     print("        ex: python %s ex01 myapp01" % (sys.argv[0]))
     print("")
     print("    Base Projects")
@@ -17,32 +17,41 @@ def print_help():
     print("")
     print("===============================================================================")
 
-def mkubiprj(basename, newname, repobase):
-    if "" == repobase:
-        repobase = "https://github.com/ubinos"
-        
+def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
     cmd = ("git clone %s/%s.git %s" % (repobase, basename, newname))
     print(cmd)
     os.system(cmd)
     os.chdir(newname)
     print("")
 
-    dlist = ["app", "source", "make"]
+    if "" != branch:
+        cmd = ("git checkout -b %s origin/%s" % (branch, branch))
+        print(cmd)
+        os.system(cmd)
+        print("")
+
+    dlist = ["app", "source", "make", ".settings"]
+    flist = []
     for dname in dlist:
-        flist = glob.glob("./%s/*" % dname)
-        for fname in flist:
-            if (os.path.isdir(fname)):
-                continue
-            print("modify %s" % fname)
-            fin = open(fname, "rt")
-            data = fin.read()
-            data = data.replace(basename, newname)
-            fin.close()
-            fin = open(fname, "wt")
-            fin.write(data)
-            fin.close()
+        flist += glob.glob("./%s/*" % dname)
+    flist += glob.glob("./.project")
+    flist += glob.glob("./.cproject")
+
+    print(flist)
+
+    for fname in flist:
+        if (os.path.isdir(fname)):
+            continue
+        print("modify %s" % fname)
+        fin = open(fname, "rt")
+        data = fin.read()
+        data = data.replace(basename, newname)
+        fin.close()
+        fin = open(fname, "wt")
+        fin.write(data)
+        fin.close()
     print("")
-    
+
     flist = glob.glob("./app/%s*" % basename)
     for fname in flist:
         fname2 = fname.replace(basename, newname, 1)
@@ -79,6 +88,8 @@ if __name__ == '__main__':
         mkubiprj(sys.argv[1], sys.argv[2], "")
     elif 4 == len(sys.argv):
         mkubiprj(sys.argv[1], sys.argv[2], sys.argv[3])
+    elif 5 == len(sys.argv):
+        mkubiprj(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
     else:
         print_help()
 
