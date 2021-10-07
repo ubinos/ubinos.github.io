@@ -36,9 +36,7 @@ def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
         flist += glob.glob("./%s/*" % dname)
     flist += glob.glob("./.project")
     flist += glob.glob("./.cproject")
-
-    print(flist)
-
+    # print(flist)
     for fname in flist:
         if (os.path.isdir(fname)):
             continue
@@ -53,6 +51,16 @@ def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
     print("")
 
     flist = glob.glob("./app/%s*" % basename)
+    # print(flist)
+    for fname in flist:
+        fname2 = fname.replace(basename, newname, 1)
+        cmd = ("git mv %s %s" %(fname, fname2))
+        print(cmd)
+        os.system(cmd)
+    print("")
+
+    flist = glob.glob("./app/%s/%s*" % (newname, basename))
+    # print(flist)
     for fname in flist:
         fname2 = fname.replace(basename, newname, 1)
         cmd = ("git mv %s %s" %(fname, fname2))
