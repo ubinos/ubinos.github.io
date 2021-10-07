@@ -30,7 +30,7 @@ def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
         os.system(cmd)
         print("")
 
-    dlist = ["app", "source", "make", ".settings"]
+    dlist = ["app", "app/%s" % basename, "source", "make", ".settings"]
     flist = []
     for dname in dlist:
         flist += glob.glob("./%s/*" % dname)
