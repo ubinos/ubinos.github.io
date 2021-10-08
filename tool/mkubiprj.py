@@ -30,6 +30,11 @@ def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
         os.system(cmd)
         print("")
 
+    cmd = ("git checkout -b myprj")
+    print(cmd)
+    os.system(cmd)
+    print("")
+
     dlist = ["app", "app/%s" % basename, "source", "make", ".settings"]
     flist = []
     for dname in dlist:
