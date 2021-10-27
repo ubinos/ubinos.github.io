@@ -11,9 +11,10 @@ def print_help():
     print("        ex: python %s ex01 myapp01" % (sys.argv[0]))
     print("")
     print("    Base Projects")
-    print("        * ex01: Basic Example for All Boards")
-    print("        * ex02nrf5: Basic Example for nRF5 Family Boards")
-    print("        * ex03stm32f2: Basic Example for STM32F2 Family Boards")
+    print("        * ubiworks: Project with all libraries")
+    print("        * ex01: Project with simple libraries")
+    print("        * ex02nrf5: Project with libraries for nRF5 Family Boards")
+    print("        * ex03stm32f2: Project with libraries for STM32F2 Family Boards")
     print("")
     print("===============================================================================")
 
@@ -30,10 +31,10 @@ def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
         os.system(cmd)
         print("")
 
-    cmd = ("git checkout -b myprj")
-    print(cmd)
-    os.system(cmd)
-    print("")
+    # cmd = ("git checkout -b myprj")
+    # print(cmd)
+    # os.system(cmd)
+    # print("")
 
     dlist = ["app", "app/%s" % basename, "source", "make", ".settings"]
     flist = []
