@@ -1,6 +1,12 @@
+/output/
+/env/
 /.settings/
 /.externalToolBuilders/
-/.project
-/.cproject
-/.pydevproject
+
+__pycache__/
+*.pyc
+
+/make/Makefile.bak
+/make/custom.mk
+/make/custom.py
 
