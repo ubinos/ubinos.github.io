@@ -12,9 +12,6 @@ def print_help():
     print("")
     print("    Base Projects")
     print("        * ubiworks: Project with all libraries")
-    print("        * ex01: Project with simple libraries")
-    print("        * ex02nrf5: Project with libraries for nRF5 Family Boards")
-    print("        * ex03stm32f2: Project with libraries for STM32F2 Family Boards")
     print("")
     print("===============================================================================")
 
@@ -82,7 +79,7 @@ def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
     os.system(cmd)
     print("")
 
-    cmd = "git remote remove origin"
+    cmd = "git remote rename origin ubinos"
     print(cmd)
     os.system(cmd)
     print("")
