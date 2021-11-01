@@ -7,8 +7,8 @@ import glob
 def print_help():
     print("===============================================================================")
     print("Usage:")
-    print("    python %s <base project name> <new project name> (<branch> (<repobase>))" % (sys.argv[0]))
-    print("        ex: python %s ex01 myapp01" % (sys.argv[0]))
+    print("    python %s <base project name> (<new project name> (<branch> (<repobase>)))" % (sys.argv[0]))
+    print("        ex: python %s ubiworks" % (sys.argv[0]))
     print("")
     print("    Base Projects")
     print("        * ubiworks: Project with all libraries")
@@ -16,6 +16,9 @@ def print_help():
     print("===============================================================================")
 
 def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
+    if newname == "":
+        newname = basename
+
     cmd = ("git clone %s/%s.git %s" % (repobase, basename, newname))
     print(cmd)
     os.system(cmd)
@@ -95,7 +98,9 @@ def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
     #print("")
 
 if __name__ == '__main__':
-    if 3 == len(sys.argv):
+    if 2 == len(sys.argv):
+        mkubiprj(sys.argv[1], "", "")
+    elif 3 == len(sys.argv):
         mkubiprj(sys.argv[1], sys.argv[2], "")
     elif 4 == len(sys.argv):
         mkubiprj(sys.argv[1], sys.argv[2], sys.argv[3])
