@@ -53,6 +53,8 @@
 * Adafruit_Sensor
 * Adafruit_BME280_Library_wrapper
 * Adafruit_BME280_Library
+* DHT-sensor-library_wrapper
+* DHT-sensor-library
 
 #### [Projects for TensorFlow Lite for Microcontrollers 텐서플로우 라이트 포 마이크로컨트롤러를 위한 프로젝트](https://sonamu.atlassian.net/l/c/308F8d3o)
 
