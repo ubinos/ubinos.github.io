@@ -3,38 +3,29 @@
 import os
 import sys
 import glob
+import shutil
 
 def print_help():
     print("===============================================================================")
     print("Usage:")
     print("    python %s <base project name> (<new project name> (<branch> (<repobase>)))" % (sys.argv[0]))
     print("        ex: python %s ubiworks" % (sys.argv[0]))
+    print("    python %s --clone <source project name> <destination project name>" % (sys.argv[0]))
+    print("        ex: python %s ubiworks myworks" % (sys.argv[0]))
     print("")
     print("    Base Projects")
     print("        * ubiworks: Project with all libraries")
     print("")
     print("===============================================================================")
 
-def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
-    if newname == "":
-        newname = basename
+def copy_tree(src, dst):
+    if os.path.isdir(dst):
+        dst = os.path.join(dst, os.path.split(src)[1])
+    shutil.copytree(src, dst)
 
-    cmd = ("git clone %s/%s.git %s" % (repobase, basename, newname))
-    print(cmd)
-    os.system(cmd)
-    os.chdir(newname)
-    print("")
-
-    if "" != branch:
-        cmd = ("git checkout -b %s origin/%s" % (branch, branch))
-        print(cmd)
-        os.system(cmd)
-        print("")
-
-    # cmd = ("git checkout -b myprj")
-    # print(cmd)
-    # os.system(cmd)
-    # print("")
+def rename_contents(basename, newname):
+    if basename == "" or basename == newname :
+        return
 
     dlist = ["app", "app/%s" % basename, "source", "make", ".settings"]
     flist = []
@@ -74,6 +65,31 @@ def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
         os.system(cmd)
     print("")
 
+def make_prj(basename, newname, branch, repobase = "https://github.com/ubinos"):
+    print("make %s from %s" % (newname, basename))
+
+    if newname == "":
+        newname = basename
+
+    cmd = ("git clone %s/%s.git %s" % (repobase, basename, newname))
+    print(cmd)
+    os.system(cmd)
+    os.chdir(newname)
+    print("")
+
+    if "" != branch:
+        cmd = ("git checkout -b %s origin/%s" % (branch, branch))
+        print(cmd)
+        os.system(cmd)
+        print("")
+
+    # cmd = ("git checkout -b myprj")
+    # print(cmd)
+    # os.system(cmd)
+    # print("")
+
+    rename_contents(basename, newname)
+
     cmd = "git submodule init"
     print(cmd)
     os.system(cmd)
@@ -97,15 +113,35 @@ def mkubiprj(basename, newname, branch, repobase = "https://github.com/ubinos"):
     #os.system(cmd)
     #print("")
 
+    print("successed")
+    return
+
+def clone_prj(src, dst):
+    print("clone %s to %s" % (src, dst))
+
+    if src == "" or src == dst:
+        print("failed")
+        return
+
+    copy_tree(src, dst)
+    os.chdir(dst)
+    rename_contents(src, dst)
+
+    print("successed")
+    return
+
 if __name__ == '__main__':
-    if 2 == len(sys.argv):
-        mkubiprj(sys.argv[1], "", "")
-    elif 3 == len(sys.argv):
-        mkubiprj(sys.argv[1], sys.argv[2], "")
-    elif 4 == len(sys.argv):
-        mkubiprj(sys.argv[1], sys.argv[2], sys.argv[3])
-    elif 5 == len(sys.argv):
-        mkubiprj(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    if 4 == len(sys.argv) and sys.argv[1] == "--clone":
+        clone_prj(sys.argv[2], sys.argv[3])
     else:
-        print_help()
+        if 2 == len(sys.argv):
+            make_prj(sys.argv[1], "", "")
+        elif 3 == len(sys.argv):
+            make_prj(sys.argv[1], sys.argv[2], "")
+        elif 4 == len(sys.argv):
+            make_prj(sys.argv[1], sys.argv[2], sys.argv[3])
+        elif 5 == len(sys.argv):
+            make_prj(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+        else:
+            print_help()
 
