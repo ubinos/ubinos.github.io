@@ -16,7 +16,7 @@ def print_help():
     print("        ex: python %s ubiworks" % (sys.argv[0]))
     print("")
     print("    python %s --edu-clone <base project name in edu repo> (<new project name>)" % (sys.argv[0]))
-    print("        ex: python %s --edu-clone mp_course_knu2022_1_2001000001_slblue" % (sys.argv[0]))
+    print("        ex: python %s --edu-clone mp_course_knu2022_1_ubiworks_2001000001_slblue" % (sys.argv[0]))
     print("")
     print("    python %s --local-clone <source project name> <destination project name>" % (sys.argv[0]))
     print("        ex: python %s --local-clone ubiworks myworks" % (sys.argv[0]))
