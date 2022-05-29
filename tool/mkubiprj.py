@@ -5,13 +5,21 @@ import sys
 import glob
 import shutil
 
+version_string = "03.01.00"
+
 def print_help():
     print("===============================================================================")
+    print("Version: %s" %(version_string))
+    print("")
     print("Usage:")
     print("    python %s <base project name> (<new project name> (<branch> (<repobase>)))" % (sys.argv[0]))
     print("        ex: python %s ubiworks" % (sys.argv[0]))
-    print("    python %s --clone <source project name> <destination project name>" % (sys.argv[0]))
-    print("        ex: python %s ubiworks myworks" % (sys.argv[0]))
+    print("")
+    print("    python %s --edu-clone <base project name in edu repo> (<new project name>)" % (sys.argv[0]))
+    print("        ex: python %s --edu-clone mp_course_knu2022_1_2001000001_slblue" % (sys.argv[0]))
+    print("")
+    print("    python %s --local-clone <source project name> <destination project name>" % (sys.argv[0]))
+    print("        ex: python %s --local-clone ubiworks myworks" % (sys.argv[0]))
     print("")
     print("    Base Projects")
     print("        * ubiworks: Project with all libraries")
@@ -65,7 +73,7 @@ def rename_contents(basename, newname):
         os.system(cmd)
     print("")
 
-def make_prj(basename, newname, branch, repobase = "https://github.com/ubinos"):
+def make_prj(basename, newname, branch, repobase = "https://github.com/ubinos", remote_rename=True):
     print("make %s from %s" % (newname, basename))
 
     if newname == "":
@@ -98,10 +106,11 @@ def make_prj(basename, newname, branch, repobase = "https://github.com/ubinos"):
     os.system(cmd)
     print("")
 
-    cmd = "git remote rename origin ubinos"
-    print(cmd)
-    os.system(cmd)
-    print("")
+    if remote_rename:
+        cmd = "git remote rename origin ubinos"
+        print(cmd)
+        os.system(cmd)
+        print("")
 
     cmd = "git add ."
     print(cmd)
@@ -116,8 +125,8 @@ def make_prj(basename, newname, branch, repobase = "https://github.com/ubinos"):
     print("successed")
     return
 
-def clone_prj(src, dst):
-    print("clone %s to %s" % (src, dst))
+def local_clone(src, dst):
+    print("local_clone %s to %s" % (src, dst))
 
     if src == "" or src == dst:
         print("failed")
@@ -131,8 +140,18 @@ def clone_prj(src, dst):
     return
 
 if __name__ == '__main__':
-    if 4 == len(sys.argv) and sys.argv[1] == "--clone":
-        clone_prj(sys.argv[2], sys.argv[3])
+    if 2 <= len(sys.argv) and sys.argv[1] == "--local-clone":
+        if 4 == len(sys.argv):
+            local_clone(sys.argv[2], sys.argv[3])
+        else:
+            print_help()
+    elif 2 <= len(sys.argv) and sys.argv[1] == "--edu-clone":
+        if 3 == len(sys.argv):
+            make_prj(sys.argv[2], sys.argv[2], "master", "git@github.com:ubinos-edu", False)
+        elif 4 == len(sys.argv):
+            make_prj(sys.argv[2], sys.argv[3], "master", "git@github.com:ubinos-edu", False)
+        else:
+            print_help()
     else:
         if 2 == len(sys.argv):
             make_prj(sys.argv[1], "", "")
