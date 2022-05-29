@@ -135,6 +135,38 @@ def local_clone(src, dst):
     copy_tree(src, dst)
     os.chdir(dst)
     rename_contents(src, dst)
+    os.chdir("..")
+
+    print("successed")
+    return
+
+def create_edu_repo(src, dst):
+    local_clone(src, dst)
+    print("")
+
+    os.chdir(dst)
+
+    cmd = "git remote rename origin ubinos-edu"
+    print(cmd)
+    os.system(cmd)
+    print("")
+
+    cmd = ("git remote add origin git@github.com:ubinos-edu/%s.git" % (dst))
+    print(cmd)
+    os.system(cmd)
+    print("")
+
+    cmd = "git remote -vv"
+    print(cmd)
+    os.system(cmd)
+    print("")
+
+    cmd = "git push -u origin master"
+    print(cmd)
+    os.system(cmd)
+    print("")
+
+    os.chdir("..")
 
     print("successed")
     return
@@ -150,6 +182,11 @@ if __name__ == '__main__':
             make_prj(sys.argv[2], sys.argv[2], "master", "git@github.com:ubinos-edu", False)
         elif 4 == len(sys.argv):
             make_prj(sys.argv[2], sys.argv[3], "master", "git@github.com:ubinos-edu", False)
+        else:
+            print_help()
+    elif 2 <= len(sys.argv) and sys.argv[1] == "--edu-create":
+        if 4 == len(sys.argv):
+            create_edu_repo(sys.argv[2], sys.argv[3])
         else:
             print_help()
     else:
