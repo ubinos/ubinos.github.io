@@ -87,7 +87,7 @@
 
 <br/>
 
-### [Question and Answer 질문과 답변](https://github.com/ubinos/question_and_answer)
+### [Question and Answer 질문과 답변](https://github.com/ubinos/question_and_answer/issues?q=)
 
 <br/>
 
