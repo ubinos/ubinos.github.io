@@ -6,3 +6,5 @@
    :caption: 목차:
 
    introduction.md
+   getting_started.md
+
