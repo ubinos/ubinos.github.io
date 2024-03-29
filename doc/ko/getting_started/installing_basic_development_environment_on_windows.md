@@ -1,4 +1,4 @@
-### 윈도우에 개발 환경 설치하기
+### 윈도우에 기본 개발 환경 설치하기
 
 다음은 윈도우 10 64비트 버전에 유비노스 개발 환경을 설정하는 과정을 설명한다.
 사용된 설치 패키지는 2024년 2월 28일의 최신 안정 버전이다.
@@ -82,6 +82,14 @@ C:\msys64\ucrt64\bin
 pacman -S --needed base-devel git openssh mingw-w64-ucrt-x86_64-toolchain mingw-w64-ucrt-x86_64-ccache
 ```
 
+#### 큐이엠유(QEMU) 설치하기
+
+명령어 프롬프트 "cmd"를 연 후, 다음 명령을 입력해 QEMU 패키지를 설치한다.
+
+```
+pacman -S --needed mingw-w64-ucrt-x86_64-qemu
+```
+
 #### 브이에스코드(VSCode) 설치하기
 
 1. 다음 웹사이트에서 설치 패키지를 받아서 설치한다.
@@ -109,10 +117,3 @@ pacman -S --needed base-devel git openssh mingw-w64-ucrt-x86_64-toolchain mingw-
 * CMake Tools (by Microsoft)
 * Makefile Tools (by Microsoft)
 
-#### 큐이엠유(QEMU) 설치하기
-
-명령어 프롬프트 "cmd"를 연 후, 다음 명령을 입력해 QEMU 패키지를 설치한다.
-
-```
-pacman -S --needed mingw-w64-ucrt-x86_64-qemu
-```
