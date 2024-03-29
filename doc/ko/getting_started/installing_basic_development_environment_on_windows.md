@@ -10,7 +10,7 @@ __언급하지 않은 설치 선택 사항은 기본 값을 사용한다.__
     * <https://cmake.org>
         + --> Download
             - --> cmake-3.29.0-rc2-windows-x86_64.msi
-    * __설치 시 반드시 지정해야 하는 선택 사항은 아래와 같다.__
+    * __설치 시 지정해야 하는 선택 사항은 아래와 같다.__
         + Add CMake to the system PATH for all users: __Check__
 
 #### 깃(Git) 설치하기
@@ -26,7 +26,7 @@ __언급하지 않은 설치 선택 사항은 기본 값을 사용한다.__
     * <https://python.org>
         + --> Downloads --> Download Python 3.10.11
             - --> python-3.10.11-amd64.exe
-    * __설치 시 반드시 지정해야 하는 선택 사항은 아래와 같다.__
+    * __설치 시 지정해야 하는 선택 사항은 아래와 같다.__
         + Add Python 3.10 to PATH: __Check__
 
 2. 명령어 프롬프트 "cmd"를 연 후, 다음 명령을 입력해 ttkwidgets를 설치한다.
@@ -39,7 +39,7 @@ __언급하지 않은 설치 선택 사항은 기본 값을 사용한다.__
 * 다음 웹사이트에서 설치 패키지(gcc-arm-none-eabi-10.3-2021.10)를 받아서 설치한다.
     * <https://developer.arm.com/downloads/-/gnu-rm>
         + --> gcc-arm-none-eabi-10.3-2021.10-win32.exe
-    * __설치 시 반드시 지정해야 하는 선택 사항은 아래와 같다.__
+    * __설치 시 지정해야 하는 선택 사항은 아래와 같다.__
         + Add path to environment variable: __Check__
 
 #### 엠시스2(MSYS2) 설치하기

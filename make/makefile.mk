@@ -48,16 +48,16 @@ xrun:
 
 doc:
 	$(call begin_message)
-	$(_PRECMD) && cd "$(LIBRARY_DIR)/ubinos.github.io" && sphinx-build doc/en "$(_OUTPUT_DIR)/en"
-	$(_PRECMD) && cd "$(LIBRARY_DIR)/ubinos.github.io" && sphinx-build doc/en -W -b linkcheck "$(_OUTPUT_DIR)/en"
 	$(_PRECMD) && cd "$(LIBRARY_DIR)/ubinos.github.io" && sphinx-build doc/ko "$(_OUTPUT_DIR)/ko"
 	$(_PRECMD) && cd "$(LIBRARY_DIR)/ubinos.github.io" && sphinx-build doc/ko -W -b linkcheck "$(_OUTPUT_DIR)/ko"
+	# $(_PRECMD) && cd "$(LIBRARY_DIR)/ubinos.github.io" && sphinx-build doc/en "$(_OUTPUT_DIR)/en"
+	# $(_PRECMD) && cd "$(LIBRARY_DIR)/ubinos.github.io" && sphinx-build doc/en -W -b linkcheck "$(_OUTPUT_DIR)/en"
 	$(call end_message)
 
 opendoc:
 	$(call begin_message)
-	$(shell python "$(_TOOLBOX)" get_open_command_for_cmake) "$(_OUTPUT_DIR)/en/index.html"
 	$(shell python "$(_TOOLBOX)" get_open_command_for_cmake) "$(_OUTPUT_DIR)/ko/index.html"
+	# $(shell python "$(_TOOLBOX)" get_open_command_for_cmake) "$(_OUTPUT_DIR)/en/index.html"
 	$(call end_message)
 
 clean:
