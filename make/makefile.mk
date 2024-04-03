@@ -54,7 +54,7 @@ doc:
 	# $(_PRECMD) && cd "$(LIBRARY_DIR)/ubinos.github.io" && sphinx-build doc/en -W -b linkcheck "$(_OUTPUT_DIR)/en"
 	$(call end_message)
 
-opendoc:
+xopendoc:
 	$(call begin_message)
 	$(shell python "$(_TOOLBOX)" get_open_command_for_cmake) "$(_OUTPUT_DIR)/ko/index.html"
 	# $(shell python "$(_TOOLBOX)" get_open_command_for_cmake) "$(_OUTPUT_DIR)/en/index.html"
