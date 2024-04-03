@@ -102,9 +102,13 @@ __언급하지 않은 설치 선택 사항은 기본 값을 사용한다.__
 
 2. 아래 그림과 같이 GNU Arm Embedded Toolchain, Python, MicrosoftVS Code, msys64 경로가 모두 추가되어 있고, msys64의 경로는 마지막에 위치해 있는지 확인한다.
 
+![윈도우 사용자 환경 변수](../figure/image//windows10_user_environment_variables.png)
+
 3. "윈도우키 + R키"를 누른 후 "sysdm.cpl"를 입력하고 엔터키를 눌러 시스템 속성을 연다. 그 다음 아래 위치에 있는 __시스템 환경 변수__ "PATH"를 연다.
     * 고급(Advanced) --> 환경 변수(Environment Variables ) --> __시스템 변수(User variables)__
         + --> Path
 
 4. 아래 그림과 같이 Git, CMake 경로가 모두 추가되어 있는지 확인한다. (이곳에 msys64의 경로가 추가되어 있으면 안 된다.)
+
+![윈도우 시스템 환경 변수](../figure/image//windows10_system_environment_variables.png)
 
