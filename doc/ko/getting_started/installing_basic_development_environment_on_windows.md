@@ -29,9 +29,9 @@ __언급하지 않은 설치 선택 사항은 기본 값을 사용한다.__
     * __설치 시 지정해야 하는 선택 사항은 아래와 같다.__
         + Add Python 3.10 to PATH: __Check__
 
-2. 명령어 프롬프트 "cmd"를 연 후, 다음 명령을 입력해 ttkwidgets를 설치한다.
+2. 명령어 프롬프트 "cmd"를 연 후, 다음 명령을 입력해 ttkwidgets, virtualenv를 설치한다.
     ```
-    pip install ttkwidgets
+    pip install ttkwidgets virtualenv
     ```
 
 #### 그누 암 임베디드 툴체인(GNU ARM Embedded Toolchain) 설치하기
@@ -87,6 +87,7 @@ __언급하지 않은 설치 선택 사항은 기본 값을 사용한다.__
     * MemoryView (by mcu-debug)
     * ARM Assembly (by dan-c-underwood)
     * Hex Editor (by Microsoft)
+    * Open (by sandcastle)
     * CMake Tools (by Microsoft)
     * Makefile Tools (by Microsoft)
 
