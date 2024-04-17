@@ -1,4 +1,8 @@
-# 소개
+.. _introduction:
+
+*******************************************************************************
+소개
+*******************************************************************************
 
 유비노스(Ubiquitous Computing Network Operating System)는 유비쿼터스 컴퓨팅 네트워크(사물인터넷)의 초소형 초저전력 단말 장치에 적합하도록 설계되고 구현된 운영체제이다.
 
@@ -26,4 +30,10 @@
 
 다음 그림은 유비노스 구조를 보여준다.
 
-![유비노스 구조](../en/figure/image/ubinos_architecture.png)
+.. image:: /../../ubinos_home_en/doc/_static/image/ubinos_architecture.png
+    :width: 800 px
+    :align: center
+    :alt: 유비노스 구조
+
+.. centered::
+    유비노스 구조

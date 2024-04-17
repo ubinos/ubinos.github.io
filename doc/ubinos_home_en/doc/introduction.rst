@@ -1,4 +1,8 @@
-# Introduction
+.. _introduction:
+
+*******************************************************************************
+Introduction
+*******************************************************************************
 
 Ubinos(Ubiquitous Computing Network Operating System) is an operating system designed and implemented to fit the ultra-small and ultra-low-power terminal equipment of ubiquitous computing(IoT) networks.
 
@@ -26,4 +30,10 @@ Ubinos has been designed and implemented to achieve these goals with the followi
 
 The following figure shows the Ubinos architecture.
 
-![Ubinos architecture](../en/figure/image/ubinos_architecture.png)
+.. image:: /_static/image/ubinos_architecture.png
+    :width: 800 px
+    :align: center
+    :alt: Ubinos architecture
+
+.. centered::
+    Ubinos architecture
