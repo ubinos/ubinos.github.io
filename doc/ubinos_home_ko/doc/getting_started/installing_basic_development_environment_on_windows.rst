@@ -146,7 +146,7 @@
 2. 아래 그림과 같이 GNU Arm Embedded Toolchain, Python, MicrosoftVS Code, msys64 경로가 모두 추가되어 있고, msys64의 경로는 마지막에 위치해 있는지 확인한다.
 
 .. image:: /_static/image/windows10_user_environment_variables.png
-    :width: 700 px
+    :width: 600 px
     :align: center
     :alt: 윈도우 사용자 환경 변수
 
@@ -162,7 +162,7 @@
 4. 아래 그림과 같이 Git, CMake 경로가 모두 추가되어 있는지 확인한다. (이곳에 msys64의 경로가 추가되어 있으면 안 된다.)
 
 .. image:: /_static/image/windows10_system_environment_variables.png
-    :width: 700 px
+    :width: 600 px
     :align: center
     :alt: 윈도우 시스템 환경 변수
 
