@@ -146,7 +146,7 @@
 2. 아래 그림과 같이 GNU Arm Embedded Toolchain, Python, MicrosoftVS Code, msys64 경로가 모두 추가되어 있고, msys64의 경로는 마지막에 위치해 있는지 확인한다.
 
 .. image:: /_static/image/windows10_user_environment_variables.png
-    :width: 400 px
+    :width: 700 px
     :align: center
     :alt: 윈도우 사용자 환경 변수
 
@@ -162,9 +162,33 @@
 4. 아래 그림과 같이 Git, CMake 경로가 모두 추가되어 있는지 확인한다. (이곳에 msys64의 경로가 추가되어 있으면 안 된다.)
 
 .. image:: /_static/image/windows10_system_environment_variables.png
-    :width: 400 px
+    :width: 700 px
     :align: center
     :alt: 윈도우 시스템 환경 변수
 
 .. centered::
     윈도우 시스템 환경 변수
+
+5. 명령어 프롬프트 "cmd"를 연 후, 다음 명령을 입력해 개발 도구들이 정상적으로 설치되었는지 확인한다.
+
+    .. code-block:: console
+
+        pip list | grep ttkwidgets
+        which python
+        which cmake
+        which make
+        which git
+        which arm-none-eabi-gcc
+        which ssh
+        which ssh-keygen
+
+아래는 정상적으로 설치되었을 경우 결과 예이다.
+
+.. image:: /_static/image/windows10_installation_check_result.png
+    :width: 700 px
+    :align: center
+    :alt: 윈도우용 개발 도구 설치 확인 결과 예
+
+.. centered::
+    윈도우용 개발 도구 설치 확인 결과 예
+
