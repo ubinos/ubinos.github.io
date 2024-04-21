@@ -94,7 +94,7 @@
 
     .. code-block:: console
 
-        pacman -S --needed base-devel git openssh mingw-w64-ucrt-x86_64-toolchain mingw-w64-ucrt-x86_64-ccache
+        pacman -S --needed base-devel git openssh mingw-w64-ucrt-x86_64-toolchain mingw-w64-ucrt-x86_64-ccache mingw-w64-ucrt-x86_64-poppler
 
 큐이엠유(QEMU) 설치하기
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
