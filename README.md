@@ -6,9 +6,9 @@
 
 <br/>
 
-### [Coding Conventions 코딩 규칙](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/78905345/Coding+Conventions?atlOrigin=eyJpIjoiNzA4YjM1ZmYyODAzNGFmYjgyZjY5MjU4YTNiYjU1YjIiLCJwIjoiYyJ9)
+<!-- ### [Coding Conventions 코딩 규칙](https://sonamu.atlassian.net/wiki/spaces/PUBL/pages/78905345/Coding+Conventions?atlOrigin=eyJpIjoiNzA4YjM1ZmYyODAzNGFmYjgyZjY5MjU4YTNiYjU1YjIiLCJwIjoiYyJ9)
 
-<br/>
+<br/> -->
 
 ### [Ubinos API Help 유비노스 API 도움말](api/ubinos/html)
 
