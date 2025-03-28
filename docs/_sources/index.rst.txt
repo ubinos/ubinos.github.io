@@ -1,0 +1,30 @@
+.. only:: not latex
+
+   Ubinos Home
+   #####################################################################
+
+   2025년도 1학기 마이크로프로세서 강의 참고 자료
+   ****************************************************************
+
+   * :ref:`technical_report_002003_ubinos_getting_started_guide_win`
+   * :ref:`technical_report_002004_ubinos_getting_started_guide_linux`
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Contents:
+   :hidden:
+
+   introduction
+
+   technical_reports
+
+   references
+
+.. Indices and search
+.. #####################################################################
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+

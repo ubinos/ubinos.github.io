@@ -1,6 +1,0 @@
-# ubinos_config_info {"name_base": "ubinos_home_en", "build_type": "make", "make_dir": "library/ubinos/make_sphinx", "include_sub_dir": true}
-
-APP__NAME = ubinos_home_en
-
-BUILD_HTML ?= 1
-BUILD_LATEXPDF ?= 0

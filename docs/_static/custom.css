@@ -1,0 +1,9 @@
+div[class^='highlight'] pre {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+}
+
+.highlight {
+    word-wrap: break-word !important;
+}
+

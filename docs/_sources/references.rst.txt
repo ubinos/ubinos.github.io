@@ -1,0 +1,10 @@
+.. _references:
+
+
+.. only:: not latex
+
+    References
+    #####################################################################
+
+.. bibliography:: bibliography.bib
+
