@@ -20,7 +20,7 @@ Technical reports
 
 -------------------------------------------------------------------------------
 
-.. include:: technical_report/technical_report_002006_vscode_tips_for_ubinos_development.rst
+.. include:: technical_report/technical_report_002006_vscode_tips.rst
 
 .. vspace:: 1
 

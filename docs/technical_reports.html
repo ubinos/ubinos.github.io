@@ -209,7 +209,7 @@
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Technical reports</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Technical reports</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win">유비노스 시작 안내서 (윈도우즈)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#technical-report-002004-ubinos-getting-started-guide-linux">유비노스 시작 안내서 (리눅스)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ubinos-vscode">Ubinos 개발을 위한 VSCode 사용 팁</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#technical-report-002006-vscode-tips">VSCode 활용 팁</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#technical-report-002002-ubiquitous-computing">유비쿼터스 컴퓨팅</a></li>
 </ul>
 </li>
@@ -277,19 +277,35 @@
 <li><p>다음 명령어 실행해 필요한 패키지 설치</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">choco feature enable -n allowGlobalConfirmation</span>
-<span class="go">choco install cmake --installargs &#39;ADD_CMAKE_TO_PATH=System&#39;</span>
-<span class="go">choco install ninja gperf python311 git dtc-msys2 wget 7zip</span>
-<span class="go">choco install make python3-virtualenv qemu</span>
+<span class="go">choco install ninja make gperf git dtc-msys2 wget 7zip python311 python3-virtualenv cmake qemu</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li><p>다음 명령을 실행해 qemu 설치 경로를 환경변수에 추가</p></li>
+<li><p><strong>명령 프롬프트(cmd.exe) 창 닫기</strong></p></li>
+<li><p>시스템 변수의 PATH에 다음 경로를 추가한다.</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">setx PATH &quot;%PATH%;C:\Program Files\qemu&quot; /M</span>
+<ul class="simple">
+<li><dl class="simple">
+<dt>시스템 변수의 PATH 설정 메뉴</dt><dd><ul>
+<li><p>윈도우 설정 -&gt; 시스템 -&gt; 정보 -&gt; 고급 시스템 설정 -&gt; 환경 변수 -&gt; 시스템 변수 -&gt; Path</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>추가할 경로</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Program Files\qemu
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p><strong>명령 프롬프트(cmd.exe) 창 닫기</strong></p></li>
+<p><a class="reference internal" href="#figure-002002-ubinos-env-path-setting-win"><span class="std std-numref">그림 2</span></a> 은 경로 설정 예를 보여준다.</p>
+<figure class="align-center" id="id32">
+<span id="figure-002002-ubinos-env-path-setting-win"></span><a class="reference internal image-reference" href="_images/figure_002002_ubinos_env_path_setting_win.png"><img alt="Ubinos Env. Path Setting for Windows 11" src="_images/figure_002002_ubinos_env_path_setting_win.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">그림 2 </span><span class="caption-text">Ubinos Env. Path Setting for Windows 11</span><a class="headerlink" href="#id32" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="5">
 <li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행</p></li>
 <li><p>다음 명령을 수행해 git 사용자 이름과 이메일 설정</p></li>
 </ol>
@@ -409,7 +425,7 @@
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;&quot;</span>
 <span class="go">&quot;* env activate command: &quot;</span>
-<span class="go">&quot;C:/MyWorks/ubinos/ubiworks/output/ubinos_venv\Scripts\activate&quot;</span>
+<span class="go">&quot;C:\MyWorks\ubinos\ubiworks\output\ubinos_venv\Scripts\activate.bat&quot;</span>
 <span class="go">&quot;&quot;</span>
 <span class="go">&quot;* env deactivate command: &quot;</span>
 <span class="go">&quot;deactivate&quot;</span>
@@ -419,11 +435,11 @@
 <ol class="arabic simple" start="7">
 <li><p>가상환경 활성화 명령을 실행해 ubinos_venv 활성화</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;C:/MyWorks/ubinos/ubiworks/output/ubinos_venv\Scripts\activate&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;C:\MyWorks\ubinos\ubiworks\output\ubinos_venv\Scripts\activate.bat&quot;</span>
 </pre></div>
 </div>
 <p>위 명령처럼 절대경로로 실행해도 되지만, 아래 명령처럼 상대경로로 실행해도 됩니다.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">..\output\ubinos_venv\Scripts\activate</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">..\output\ubinos_venv\Scripts\activate.bat</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="7">
@@ -465,7 +481,7 @@
 <ol class="arabic simple" start="3">
 <li><p>다음 명령을 실행해 유비노스 개발용 가상환경 활성화</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">..\output\ubinos_venv\Scripts\activate</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">..\output\ubinos_venv\Scripts\activate.bat</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
@@ -479,7 +495,7 @@
 <h3>7. VSCode로 유비노스 hello_world 예제 선택, 빌드, 실행<a class="headerlink" href="#vscode-hello-world" title="Link to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="#technical-report-002006-vscode-tips-for-ubinos-development"><span class="std std-ref">Ubinos 개발을 위한 VSCode 사용 팁</span></a> 참조</p>
+<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
 </div>
 <ol class="arabic simple">
 <li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 “Ubinos config selecgtor”를 실행</p></li>
@@ -571,7 +587,7 @@
 <h3>8. VSCode로 유비노스 hello_world 예제 디버깅하기<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="#technical-report-002006-vscode-tips-for-ubinos-development"><span class="std std-ref">Ubinos 개발을 위한 VSCode 사용 팁</span></a> 참조</p>
+<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
 </div>
 <ol class="arabic simple">
 <li><p>“<a class="reference internal" href="#tr1017-open-ubinos-source-tree-with-vscode"><span class="std std-ref">6. VSCode로 유비노스 소스트리 열기</span></a>” 과정을 수행해 VSCode로 유비노스 소스트리 열기</p></li>
@@ -585,7 +601,6 @@
 <li><p>CodeLLDB (by Vadim Chugunov)</p></li>
 <li><p>CMake (by twxs)</p></li>
 <li><p>MemoryView (by mcu-debug)</p></li>
-<li><p>ARM Assembly (by dan-c-underwood)</p></li>
 <li><p>Open (by sandcastle)</p></li>
 </ul>
 <ol class="arabic simple" start="3">
@@ -832,7 +847,7 @@ deactivate
 <h3>7. VSCode로 유비노스 hello_world 예제 선택, 빌드, 실행<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="#technical-report-002006-vscode-tips-for-ubinos-development"><span class="std std-ref">Ubinos 개발을 위한 VSCode 사용 팁</span></a> 참조</p>
+<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
 </div>
 <ol class="arabic simple">
 <li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 “Ubinos config selecgtor”를 실행</p></li>
@@ -925,7 +940,7 @@ make[1]: Leaving directory &#39;/home/siminsungho/Workspace/temp/ubiworks/output
 <h3>8. VSCode로 유비노스 hello_world 예제 디버깅하기<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="#technical-report-002006-vscode-tips-for-ubinos-development"><span class="std std-ref">Ubinos 개발을 위한 VSCode 사용 팁</span></a> 참조</p>
+<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
 </div>
 <ol class="arabic simple">
 <li><p>“<a class="reference internal" href="#tr1017-open-ubinos-source-tree-with-vscode"><span class="std std-ref">6. VSCode로 유비노스 소스트리 열기</span></a>” 과정을 수행해 VSCode로 유비노스 소스트리 열기</p></li>
@@ -963,10 +978,10 @@ make[1]: Leaving directory &#39;/home/siminsungho/Workspace/temp/ubiworks/output
 <br><hr class="docutils" />
 </section>
 </section>
-<section id="ubinos-vscode">
-<span id="technical-report-002006-vscode-tips-for-ubinos-development"></span><h2>Ubinos 개발을 위한 VSCode 사용 팁<a class="headerlink" href="#ubinos-vscode" title="Link to this heading">¶</a></h2>
-<section id="id26">
-<h3>단축키<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
+<section id="technical-report-002006-vscode-tips">
+<span id="id26"></span><h2>VSCode 활용 팁<a class="headerlink" href="#technical-report-002006-vscode-tips" title="Link to this heading">¶</a></h2>
+<section id="id27">
+<h3>단축키<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>“Run build task” 실행</p>
 <blockquote>
@@ -1005,13 +1020,13 @@ make[1]: Leaving directory &#39;/home/siminsungho/Workspace/temp/ubiworks/output
 </section>
 </section>
 <section id="technical-report-002002-ubiquitous-computing">
-<span id="id27"></span><h2>유비쿼터스 컴퓨팅<a class="headerlink" href="#technical-report-002002-ubiquitous-computing" title="Link to this heading">¶</a></h2>
+<span id="id28"></span><h2>유비쿼터스 컴퓨팅<a class="headerlink" href="#technical-report-002002-ubiquitous-computing" title="Link to this heading">¶</a></h2>
 <p>유비쿼터스 컴퓨팅은 제록스 팰러 앨토 연구센터의 마크 와이저가 제안한 개념이다. 마크 와이저는 이 개념을 그의 논문 “Some Computer Science Issues in Ubiquitous Computing”에서 “사용자가 현실 세계 어디에서나 컴퓨터를 사용한다는 사실을 인식하지 못한 채 사용할 수 있도록 컴퓨터를 진보시키는 방법”이라고 정의하였다. 과거에, 이 개념 또는 이와 유사한 개념들을 언급할 때 우리나라와 일본에서는 “유비쿼터스 컴퓨팅”이라는 용어가, 미국에서는 “퍼베이시브 컴퓨팅”이라는 용어가 주로 사용되었다고 한다. 유럽에서는 “앰비언트 인텔리전스”라는 용어가 주로 사용되었다고 한다. 지금은 공통적으로 사물인터넷(IoT)이라는 용어가 주로 사용된다.</p>
-<section id="id28">
-<h3>관련 자료<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h3>
+<section id="id29">
+<h3>관련 자료<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><dl class="simple">
-<dt><span id="id29">[<a class="reference internal" href="references.html#id3" title="Mark Weiser. Some computer science issues in ubiquitous computing. Communications of the ACM, 36:75-84, 1993. doi:10.1145/159544.159617.">Wei93</a>]</span> Some Computer Science Issues in Ubiquitous Computing</dt><dd><ul>
+<dt><span id="id30">[<a class="reference internal" href="references.html#id3" title="Mark Weiser. Some computer science issues in ubiquitous computing. Communications of the ACM, 36:75-84, 1993. doi:10.1145/159544.159617.">Wei93</a>]</span> Some Computer Science Issues in Ubiquitous Computing</dt><dd><ul>
 <li><p><a class="reference external" href="https://doi.org/10.1145/159544.159617">https://doi.org/10.1145/159544.159617</a></p></li>
 </ul>
 </dd>
@@ -1146,12 +1161,12 @@ make[1]: Leaving directory &#39;/home/siminsungho/Workspace/temp/ubiworks/output
 <li><a class="reference internal" href="#id25">8. VSCode로 유비노스 hello_world 예제 디버깅하기</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ubinos-vscode">Ubinos 개발을 위한 VSCode 사용 팁</a><ul>
-<li><a class="reference internal" href="#id26">단축키</a></li>
+<li><a class="reference internal" href="#technical-report-002006-vscode-tips">VSCode 활용 팁</a><ul>
+<li><a class="reference internal" href="#id27">단축키</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#technical-report-002002-ubiquitous-computing">유비쿼터스 컴퓨팅</a><ul>
-<li><a class="reference internal" href="#id28">관련 자료</a></li>
+<li><a class="reference internal" href="#id29">관련 자료</a></li>
 </ul>
 </li>
 </ul>
