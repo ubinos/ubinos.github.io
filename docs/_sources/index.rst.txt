@@ -7,7 +7,6 @@
    ****************************************************************
 
    * :ref:`technical_report_002003_ubinos_getting_started_guide_win`
-   * :ref:`technical_report_002004_ubinos_getting_started_guide_linux`
 
 .. toctree::
    :maxdepth: 3
