@@ -1,0 +1,12 @@
+.. _getting_started_guides:
+
+
+Getting started guides
+#####################################################################
+
+.. vspace:: 1
+
+-------------------------------------------------------------------------------
+
+.. include:: technical_report/technical_report_002003_ubinos_getting_started_guide_win.rst
+

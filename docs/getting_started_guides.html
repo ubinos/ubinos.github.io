@@ -1,0 +1,758 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Technical reports" href="technical_reports.html" /><link rel="prev" title="Introduction" href="introduction.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>Getting started guides - Ubinos</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c019d564" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Ubinos</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">Ubinos</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="introduction.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Introduction</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#technical-report-002001-ubinos-introduction">유비노스 소개</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Getting started guides</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Getting started guides</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win">유비노스 시작 안내서 (윈도우즈)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="technical_reports.html">Technical reports</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Technical reports</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="technical_reports.html#vscode">VSCode 활용 팁</a></li>
+<li class="toctree-l2"><a class="reference internal" href="technical_reports.html#technical-report-002002-ubiquitous-computing">유비쿼터스 컴퓨팅</a></li>
+<li class="toctree-l2"><a class="reference internal" href="technical_reports.html#technical-report-007001-how-to-use-mp-course-materials">마프 강의 자료 사용법</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="getting-started-guides">
+<span id="id1"></span><h1>Getting started guides<a class="headerlink" href="#getting-started-guides" title="Link to this heading">¶</a></h1>
+<br><hr class="docutils" />
+<section id="technical-report-002003-ubinos-getting-started-guide-win">
+<span id="id2"></span><h2>유비노스 시작 안내서 (윈도우즈)<a class="headerlink" href="#technical-report-002003-ubinos-getting-started-guide-win" title="Link to this heading">¶</a></h2>
+<p>유비노스 시작 안내서 (윈도우즈) 동영상:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>유비노스 유튜브 채널 (<a class="reference external" href="https://youtube.com/&#64;ubinos">https://youtube.com/&#64;ubinos</a>)</dt><dd><ul>
+<li><dl class="simple">
+<dt><a class="reference external" href="https://youtube.com/playlist?list=PLrCPdTJCbmB9TwyiUClB_ze8P-u7AsCWI&amp;si=9AICUF_AUI6j8N2w">Ubinos Getting Started Guide 재생 목록</a></dt><dd><ul>
+<li><p><a class="reference external" href="https://youtu.be/CFY_Ksk_xAg">Ubinos Getting Started Guide (Windows) 동영상</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>유비노스 관련 문의 및 답변 페이지:</p>
+<ul class="simple">
+<li><p>유비노스 깃허브 이슈 페이지: (<a class="reference external" href="https://github.com/ubinos/ubinos.issues">https://github.com/ubinos/ubinos.issues</a>)</p></li>
+</ul>
+<section id="id3">
+<h3>1. 운영체제 종속적 패키지 설치<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<section id="chocolatey">
+<h4>1.1. Chocolatey 설치<a class="headerlink" href="#chocolatey" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p><strong>관리자 권한으로</strong> PowerShell 실행</p></li>
+<li><p>다음 명령어 실행</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>PowerShell 창 닫기</p></li>
+</ol>
+</section>
+<section id="id4">
+<h4>1.2. 필요한 패키지 설치<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p><strong>관리자 권한으로</strong> 명령 프롬프트(cmd.exe) 실행</p></li>
+<li><p>다음 명령어 실행해 필요한 패키지 설치</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">choco feature enable -n allowGlobalConfirmation</span>
+<span class="go">choco install ninja make gperf git dtc-msys2 wget 7zip python311 python3-virtualenv cmake qemu</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>명령 프롬프트(cmd.exe) 창 닫기</strong></p></li>
+<li><p>시스템 변수의 PATH에 다음 경로를 추가한다.</p></li>
+</ol>
+<ul class="simple">
+<li><dl class="simple">
+<dt>시스템 변수의 PATH 설정 메뉴</dt><dd><ul>
+<li><p>윈도우 설정 -&gt; 시스템 -&gt; 정보 -&gt; 고급 시스템 설정 -&gt; 환경 변수 -&gt; 시스템 변수 -&gt; Path</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>추가할 경로</p></li>
+</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Program Files\qemu
+</pre></div>
+</div>
+<p><a class="reference internal" href="#figure-002002-ubinos-env-path-setting-win"><span class="std std-numref">그림 2</span></a> 은 경로 설정 예를 보여준다.</p>
+<figure class="align-center" id="id10">
+<span id="figure-002002-ubinos-env-path-setting-win"></span><a class="reference internal image-reference" href="_images/figure_002002_ubinos_env_path_setting_win.png"><img alt="Ubinos Env. Path Setting for Windows 11" src="_images/figure_002002_ubinos_env_path_setting_win.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">그림 2 </span><span class="caption-text">Ubinos Env. Path Setting for Windows 11</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행</p></li>
+<li><p>다음 명령을 수행해 git 사용자 이름과 이메일 설정</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>“Your Name”과 “<a class="reference external" href="mailto:your-email&#37;&#52;&#48;example&#46;com">your-email<span>&#64;</span>example<span>&#46;</span>com</a>”을 본인의 이름과 이메일로 변경해서 실행해야 합니다.</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git config --global user.name &quot;Your Name&quot;</span>
+<span class="go">git config --global user.email &quot;your-email@example.com&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>명령 프롬프트(cmd.exe) 창 닫기</p></li>
+</ol>
+</section>
+</section>
+<section id="ssh-key-github">
+<h3>2. ssh key 생성 및 github에 등록<a class="headerlink" href="#ssh-key-github" title="Link to this heading">¶</a></h3>
+<section id="ssh-key">
+<h4>2.1. ssh key 생성<a class="headerlink" href="#ssh-key" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행</p></li>
+<li><p>다음 명령어를 실행해 ssh key를 생성</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh-keygen -t rsa -b 4096</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>file을 입력하라는 메시지가 나오면 엔터를 눌러 기본값을 선택합니다.</p></li>
+<li><p>passphrase를 입력하라는 메시지가 나오면 엔터를 눌러 no passphrase를 선택합니다.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>다음 명령어를 실행해 생성한 공개키를 클립보드에 복사</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">type %USERPROFILE%\.ssh\id_rsa.pub | clip</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>file을 기본값인 id_rsa가 아닌 다른 것을 선택했다면 해당 file로 변경해서 실행해야 합니다.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>명령 프롬프트(cmd.exe) 창 닫기</p></li>
+</ol>
+</section>
+<section id="github">
+<h4>2.2. 생성한 공개키를 github에 등록<a class="headerlink" href="#github" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p>웹브라우저로 <a class="reference external" href="https://github.com">https://github.com</a> 에 접속한한 후, 로그인</p></li>
+<li><p>오른쪽 상단의 프로필 사진을 클릭한 후, Settings 클릭</p></li>
+<li><p>좌측 메뉴에서 SSH and GPG keys 클릭</p></li>
+<li><p>New SSH key 클릭</p></li>
+<li><p>Title에 원하는 이름을 입력</p></li>
+<li><p>Key에 복사한 공개키를 붙여넣기</p></li>
+<li><p>Add SSH key 클릭</p></li>
+</ol>
+</section>
+</section>
+<section id="id5">
+<h3>3. 유비노스 소스트리 다운로드 및 개발용 가상환경 생성<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<section id="id6">
+<h4>3.1. 유비노스 소스트리 다운로드<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행</p></li>
+<li><p>다음 명령을 실행해 작업용 디렉토리 생성 후 해당 디렉토리로 이동</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir C:\MyWorks\ubinos</span>
+<span class="go">cd C:\MyWorks\ubinos</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>다음 명령어를 실행해 유비노스 소스트리 다운로드 후 해당 디렉토리로 이동</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/ubinos/ubiworks.git</span>
+<span class="go">cd ubiworks</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>다음 명령어를 실행해 유비노스 소스트리 서브모듈 다운로드</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git submodule update --init</span>
+<span class="go">git submodule foreach git switch ubinos-main</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>명령 프롬프트(cmd.exe) 창 닫기</p></li>
+</ol>
+</section>
+<section id="id7">
+<h4>3.2. 개발용 가상환경 생성<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행</p></li>
+<li><p>다음 명령을 실행해 유비노스 소스트리 make 디렉토리로 이동</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd C:\MyWorks\ubinos\ubiworks\make</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>다음 명령을 실행해 “Ubinos config selecgtor”를 실행</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xsel</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>“Ubinos config selecgtor” 창이 뜨면 다음을  선택한 후 Select 버튼을 클릭</p></li>
+</ol>
+<ul class="simple">
+<li><p>ubinos project의 ubinos_venv</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>다음 명령을 실행해 빌드</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make rebuildd</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>빌드가 정상적으로 완료되면 다름과 같이 가상환경 활성화, 비활성화 명령이 출력됨</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;&quot;</span>
+<span class="go">&quot;* env activate command: &quot;</span>
+<span class="go">&quot;C:\MyWorks\ubinos\ubiworks\output\ubinos_venv\Scripts\activate.bat&quot;</span>
+<span class="go">&quot;&quot;</span>
+<span class="go">&quot;* env deactivate command: &quot;</span>
+<span class="go">&quot;deactivate&quot;</span>
+<span class="go">&quot;&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>가상환경 활성화 명령을 실행해 ubinos_venv 활성화</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;C:\MyWorks\ubinos\ubiworks\output\ubinos_venv\Scripts\activate.bat&quot;</span>
+</pre></div>
+</div>
+<p>위 명령처럼 절대경로로 실행해도 되지만, 아래 명령처럼 상대경로로 실행해도 됩니다.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">..\output\ubinos_venv\Scripts\activate.bat</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>명령 프롬프트(cmd.exe) 창 닫기</p></li>
+</ol>
+</section>
+</section>
+<section id="vscode">
+<h3>4. VSCode 설치<a class="headerlink" href="#vscode" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>웹브라우저로 다음 URL에 접속해, VSCode를 다운로드 및 설치</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com">https://code.visualstudio.com</a></p></li>
+</ul>
+</section>
+<section id="gnu-arm-embedded-toolchain">
+<h3>5. GNU ARM Embedded Toolchain 설치<a class="headerlink" href="#gnu-arm-embedded-toolchain" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>웹브라우저로 다음 URL에 접속해, gcc-arm-none-eabi-10.3-2021.10-win32.exe를 다운로드 및 설치</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.arm.com/downloads/-/gnu-rm">https://developer.arm.com/downloads/-/gnu-rm</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>설치 완료 창이 뜨면 “Add path to environment variable”을 반드시 체크 하고 마침 버튼을 눌려야 합니다.</p>
+</div>
+</section>
+<section id="technical-report-002003-ubinos-getting-started-guide-win-open-ubinsos-source-tree-with-vscode">
+<span id="id8"></span><h3>6. VSCode로 유비노스 소스트리 열기<a class="headerlink" href="#technical-report-002003-ubinos-getting-started-guide-win-open-ubinsos-source-tree-with-vscode" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행</p></li>
+<li><p>다음 명령을 실행해 유비노스 소스트리 make 디렉토리로 이동</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd C:\MyWorks\ubinos\ubiworks\make</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>다음 명령을 실행해 유비노스 개발용 가상환경 활성화</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">..\output\ubinos_venv\Scripts\activate.bat</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>다음 명령을 실행해 VSCode로 유비노스 소스트리 열기</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">code ..</span>
+</pre></div>
+</div>
+</section>
+<section id="vscode-hello-world">
+<span id="technical-report-002003-ubinos-getting-started-guide-win-select-build-and-run-hello-world-example"></span><h3>7. VSCode로 유비노스 hello_world 예제 선택, 빌드, 실행<a class="headerlink" href="#vscode-hello-world" title="Link to this heading">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
+</div>
+<ol class="arabic simple">
+<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 “Ubinos config selecgtor”를 실행</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xsel</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>“Ubinos config selecgtor” 창이 뜨면 다음을  선택한 후 Select 버튼을 클릭</p></li>
+</ol>
+<ul class="simple">
+<li><p>ubinos project의 hello_world_netduinoplus2_qemu</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make rebuildd</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>빌드가 정상적으로 완료되면 다름과 같이 빌드 정보가 출력됨</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[100%] Linking C executable app.elf</span>
+
+
+<span class="go">entry address                = 0x0800043c (   134218812)</span>
+
+<span class="go">isr vector start             = 0x08000000 (   134217728)</span>
+<span class="go">isr vector end               = 0x08000188 (   134218120)</span>
+<span class="go">isr vector size              = 0x00000188 (         392) bytes</span>
+
+<span class="go">relocated isr vector start   = 0x20000000 (   536870912)</span>
+<span class="go">relocated isr vector end     = 0x20000200 (   536871424)</span>
+<span class="go">relocated isr vector size    = 0x00000200 (         512) bytes</span>
+
+<span class="go">text start                   = 0x08000000 (   134217728)</span>
+<span class="go">text end                     = 0x080204a0 (   134349984)</span>
+<span class="go">text size                    = 0x000204a0 (      132256) bytes</span>
+
+<span class="go">data start                   = 0x20000200 (   536871424)</span>
+<span class="go">data end                     = 0x2000053c (   536872252)</span>
+<span class="go">data size                    = 0x0000033c (         828) bytes</span>
+
+<span class="go">bss start                    = 0x2000053c (   536872252)</span>
+<span class="go">bss end                      = 0x200019e8 (   536877544)</span>
+<span class="go">bss size                     = 0x000014ac (        5292) bytes</span>
+
+<span class="go">heap base                    = 0x200019e8 (   536877544)</span>
+<span class="go">heap limit                   = 0x2001f800 (   536999936)</span>
+<span class="go">heap size                    = 0x0001de18 (      122392) bytes</span>
+
+<span class="go">stack limit                  = 0x2001f800 (   536999936)</span>
+<span class="go">stack top                    = 0x20020000 (   537001984)</span>
+<span class="go">stack size                   = 0x00000800 (        2048) bytes</span>
+
+<span class="go">flash start                  = 0x08000000 (   134217728)</span>
+<span class="go">flash size                   = 0x00100000 (     1048576) bytes</span>
+<span class="go">flash usage                  = 0x000207dc (      133084) bytes</span>
+
+<span class="go">ram start                    = 0x20000000 (   536870912)</span>
+<span class="go">ram size                     = 0x00020000 (      131072) bytes</span>
+<span class="go">ram static usage             = 0x000019e8 (        6632) bytes</span>
+
+
+<span class="go">[100%] Built target app</span>
+<span class="go">make[1]: Leaving directory &#39;C:/MyWorks/ubinos/ubiworks/output/hello_world_netduinoplus2_qemu&#39;</span>
+<span class="go">&quot;&quot;</span>
+<span class="go">&quot;# [End   common-build - hello_world_netduinoplus2_qemu]&quot;</span>
+<span class="go">&quot;###############################################################################&quot;</span>
+<span class="go">&quot;&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드된 elf 파일을 load</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make load</span>
+</pre></div>
+</div>
+<p>정상적으로 load가 완료되면 QEMU과, qemu-system-arm 창이 나타납니다.</p>
+<ol class="arabic simple" start="6">
+<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 load된 elf 파일을 실행</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xrun</span>
+</pre></div>
+</div>
+<p>정상적으로 실행되면 arm-none-eabi-gdb 창이 뜨고, qemu-system-arm 창에 hello world 메시지가 출력됩니다.</p>
+</section>
+<section id="technical-report-002003-ubinos-getting-started-guide-win-debugging-hello-world-example-with-vscode">
+<span id="id9"></span><h3>8. VSCode로 유비노스 hello_world 예제 디버깅하기<a class="headerlink" href="#technical-report-002003-ubinos-getting-started-guide-win-debugging-hello-world-example-with-vscode" title="Link to this heading">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
+</div>
+<ol class="arabic simple">
+<li><p>다음을 참조해 VSCode로 유비노스 소스트리 열기</p></li>
+</ol>
+<ul class="simple">
+<li><p>윈도우즈: “<a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win-open-ubinsos-source-tree-with-vscode"><span class="std std-ref">6. VSCode로 유비노스 소스트리 열기</span></a>”</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>VSCode에서 “Extensions” View를 선택한 후, 다음 확장 프로그램을 설치</p></li>
+</ol>
+<ul class="simple">
+<li><p>C/C++ (by Microsoft)</p></li>
+<li><p>C/C++ Themes (by Microsoft)</p></li>
+<li><p>C/C++ Extension Pack (by Microsoft)</p></li>
+<li><p>Python (by Microsoft)</p></li>
+<li><p>CodeLLDB (by Vadim Chugunov)</p></li>
+<li><p>CMake (by twxs)</p></li>
+<li><p>MemoryView (by mcu-debug)</p></li>
+<li><p>Open (by sandcastle)</p></li>
+<li><p>CMake Tools (by Microsoft)</p></li>
+<li><p>Makefile Tools (by Microsoft)</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>다음 확장 프로그램을 비활성화</p></li>
+</ol>
+<ul class="simple">
+<li><p>CMake Tools (by Microsoft)</p></li>
+<li><p>Makefile Tools (by Microsoft)</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>VSCode에서 “Run and Debug” View를 선택한 후, “Run and debug” 구성으로 “ARM Target (build load)”을 선택</p></li>
+<li><p>“F5” 키를 눌러 “Start Debugging” 명령 실행</p></li>
+<li><p>VSCode의 Breakpoints 창으로 마우스를 옮기면 나타나는 “+” 버튼을 누른 후, 다음을 입력해 main, appmain 함수 symbol에 breakpoint를 설정</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">main</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">appmain</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>다시 “F5” 키를 눌러 “Continue” 명령 실행</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="technical_reports.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Technical reports</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="introduction.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Introduction</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024-2025, Sungho Park
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Getting started guides</a><ul>
+<li><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win">유비노스 시작 안내서 (윈도우즈)</a><ul>
+<li><a class="reference internal" href="#id3">1. 운영체제 종속적 패키지 설치</a><ul>
+<li><a class="reference internal" href="#chocolatey">1.1. Chocolatey 설치</a></li>
+<li><a class="reference internal" href="#id4">1.2. 필요한 패키지 설치</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ssh-key-github">2. ssh key 생성 및 github에 등록</a><ul>
+<li><a class="reference internal" href="#ssh-key">2.1. ssh key 생성</a></li>
+<li><a class="reference internal" href="#github">2.2. 생성한 공개키를 github에 등록</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">3. 유비노스 소스트리 다운로드 및 개발용 가상환경 생성</a><ul>
+<li><a class="reference internal" href="#id6">3.1. 유비노스 소스트리 다운로드</a></li>
+<li><a class="reference internal" href="#id7">3.2. 개발용 가상환경 생성</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vscode">4. VSCode 설치</a></li>
+<li><a class="reference internal" href="#gnu-arm-embedded-toolchain">5. GNU ARM Embedded Toolchain 설치</a></li>
+<li><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win-open-ubinsos-source-tree-with-vscode">6. VSCode로 유비노스 소스트리 열기</a></li>
+<li><a class="reference internal" href="#vscode-hello-world">7. VSCode로 유비노스 hello_world 예제 선택, 빌드, 실행</a></li>
+<li><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win-debugging-hello-world-example-with-vscode">8. VSCode로 유비노스 hello_world 예제 디버깅하기</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>
