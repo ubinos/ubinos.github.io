@@ -208,6 +208,7 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="getting_started_guides.html">Getting started guides</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Getting started guides</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="getting_started_guides.html#technical-report-002003-ubinos-getting-started-guide-win">유비노스 시작 안내서 (윈도우즈)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started_guides.html#technical-report-002004-ubinos-getting-started-guide-linux">유비노스 시작 안내서 (리눅스)</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Technical reports</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Technical reports</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -288,8 +289,8 @@
 <li><p>“Source control” View 선택</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>윈도우: “Ctrl + Shift + G”</p></li>
-<li><p>리눅스: “Ctrl + Shift + G”, “G”</p></li>
+<li><p>윈도우: “Ctrl + Shift + G”, “G”</p></li>
+<li><p>리눅스: “Ctrl + Shift + G”</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -350,6 +351,7 @@
 </ol>
 <ul class="simple">
 <li><p>윈도우즈: “<a class="reference internal" href="getting_started_guides.html#technical-report-002003-ubinos-getting-started-guide-win"><span class="std std-ref">유비노스 시작 안내서 (윈도우즈)</span></a>”</p></li>
+<li><p>리눅스: “<a class="reference internal" href="getting_started_guides.html#technical-report-002004-ubinos-getting-started-guide-linux"><span class="std std-ref">유비노스 시작 안내서 (리눅스)</span></a>”</p></li>
 </ul>
 </section>
 <section id="id9">
@@ -359,6 +361,7 @@
 </ol>
 <ul class="simple">
 <li><p>윈도우즈: “<a class="reference internal" href="getting_started_guides.html#technical-report-002003-ubinos-getting-started-guide-win-open-ubinsos-source-tree-with-vscode"><span class="std std-ref">6. VSCode로 유비노스 소스트리 열기</span></a>”</p></li>
+<li><p>리눅스: “<a class="reference internal" href="getting_started_guides.html#technical-report-002004-ubinos-getting-started-guide-linux-open-ubinsos-source-tree-with-vscode"><span class="std std-ref">6. VSCode로 유비노스 소스트리 열기</span></a>”</p></li>
 </ul>
 <ol class="arabic simple" start="2">
 <li><p>VSCode에서 “make/liblist.json” 파일 파일 열기</p></li>
@@ -399,16 +402,17 @@
 <ol class="arabic simple" start="7">
 <li><p>“Install library commands” 창이 뜨면 “Run” 버튼 클릭</p></li>
 <li><p>Success 메시지가 뜨면 “확인” 버튼 클릭</p></li>
-<li><p>“Install library commands”의 “Close” 버튼 클릭, “Ubinos library manager” 창dml “Close” 버튼 클릭을 차례로 클릭</p></li>
+<li><p>“Install library commands”의 “Close” 버튼 클릭, “Ubinos library manager” 창의 “Close” 버튼 클릭을 차례로 클릭</p></li>
 </ol>
 </section>
 <section id="id10">
-<h3>3. 마이크로프로세서 강의 자료 예제 빌드 및 실행<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<h3>3. 마이크로프로세서 강의 자료 예제 선택, 빌드, 실행 및 디버깅<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
 <ol class="arabic simple">
 <li><p>다음을 참조해 VSCode로 유비노스 소스트리 열기</p></li>
 </ol>
 <ul class="simple">
 <li><p>윈도우즈: “<a class="reference internal" href="getting_started_guides.html#technical-report-002003-ubinos-getting-started-guide-win-open-ubinsos-source-tree-with-vscode"><span class="std std-ref">6. VSCode로 유비노스 소스트리 열기</span></a>”</p></li>
+<li><p>리눅스: “<a class="reference internal" href="getting_started_guides.html#technical-report-002004-ubinos-getting-started-guide-linux-open-ubinsos-source-tree-with-vscode"><span class="std std-ref">6. VSCode로 유비노스 소스트리 열기</span></a>”</p></li>
 </ul>
 <ol class="arabic simple" start="2">
 <li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 “Ubinos config selecgtor”를 실행</p></li>
@@ -423,7 +427,7 @@
 <li><p>mp_course_materials project의 mp_course_ex0506_hello_world_3_netduinoplus2_baremetal_qemu</p></li>
 </ul>
 <ol class="arabic simple" start="4">
-<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드 실행</p></li>
+<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make rebuildd</span>
 </pre></div>
@@ -432,7 +436,8 @@
 <li><p>다음을 참조해 예제 실행 및 디버깅</p></li>
 </ol>
 <ul class="simple">
-<li><p>윈도우즈: “<a class="reference internal" href="getting_started_guides.html#technical-report-002003-ubinos-getting-started-guide-win-debugging-hello-world-example-with-vscode"><span class="std std-ref">8. VSCode로 유비노스 hello_world 예제 디버깅하기</span></a>”</p></li>
+<li><p>윈도우즈: “<a class="reference internal" href="getting_started_guides.html#technical-report-002003-ubinos-getting-started-guide-win-debugging-hello-world-example-with-vscode"><span class="std std-ref">10. VSCode로 유비노스 hello_world 예제 실행 및 디버깅</span></a>”</p></li>
+<li><p>리눅스: “<a class="reference internal" href="getting_started_guides.html#technical-report-002004-ubinos-getting-started-guide-linux-debugging-hello-world-example-with-vscode"><span class="std std-ref">10. VSCode로 유비노스 hello_world 예제 실행 및 디버깅</span></a>”</p></li>
 </ul>
 </section>
 </section>
@@ -505,7 +510,7 @@
 <li><a class="reference internal" href="#technical-report-007001-how-to-use-mp-course-materials">마프 강의 자료 사용법</a><ul>
 <li><a class="reference internal" href="#id8">1. 유비노스 개발 환경 설치</a></li>
 <li><a class="reference internal" href="#id9">2. 마이크로프로세서 강의 자료 라이브러리 설치</a></li>
-<li><a class="reference internal" href="#id10">3. 마이크로프로세서 강의 자료 예제 빌드 및 실행</a></li>
+<li><a class="reference internal" href="#id10">3. 마이크로프로세서 강의 자료 예제 선택, 빌드, 실행 및 디버깅</a></li>
 </ul>
 </li>
 </ul>

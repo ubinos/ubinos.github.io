@@ -10,3 +10,10 @@ Getting started guides
 
 .. include:: technical_report/technical_report_002003_ubinos_getting_started_guide_win.rst
 
+
+.. vspace:: 1
+
+-------------------------------------------------------------------------------
+
+.. include:: technical_report/technical_report_002004_ubinos_getting_started_guide_linux.rst
+
