@@ -8,12 +8,6 @@ Technical reports
 
 -------------------------------------------------------------------------------
 
-.. include:: technical_report/technical_report_002006_vscode_tips.rst
-
-.. vspace:: 1
-
--------------------------------------------------------------------------------
-
 .. include:: technical_report/technical_report_002002_ubiquitous_computing.rst
 
 .. vspace:: 1
@@ -27,6 +21,12 @@ Technical reports
 -------------------------------------------------------------------------------
 
 .. include:: technical_report/technical_report_007002_how_to_use_mp_course_private_sourcetree_win.rst
+
+.. vspace:: 1
+
+-------------------------------------------------------------------------------
+
+.. include:: technical_report/technical_report_002006_vscode_tips.rst
 
 .. vspace:: 1
 
