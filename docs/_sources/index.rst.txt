@@ -8,6 +8,8 @@
 
    * :ref:`technical_report_007001_how_to_use_mp_course_materials`
 
+   * :ref:`technical_report_007002_how_to_use_mp_course_private_sourcetree_win`
+
 .. toctree::
    :maxdepth: 3
    :caption: Contents:

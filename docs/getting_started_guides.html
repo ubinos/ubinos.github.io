@@ -215,6 +215,7 @@
 <li class="toctree-l2"><a class="reference internal" href="technical_reports.html#vscode">VSCode 활용 팁</a></li>
 <li class="toctree-l2"><a class="reference internal" href="technical_reports.html#technical-report-002002-ubiquitous-computing">유비쿼터스 컴퓨팅</a></li>
 <li class="toctree-l2"><a class="reference internal" href="technical_reports.html#technical-report-007001-how-to-use-mp-course-materials">마프 강의 자료 사용법</a></li>
+<li class="toctree-l2"><a class="reference internal" href="technical_reports.html#technical-report-007002-how-to-use-mp-course-private-sourcetree-win">마프 강의 개인용 소스트리 사용법 (윈도우즈)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
@@ -259,13 +260,13 @@
 <br><hr class="docutils" />
 <section id="technical-report-002003-ubinos-getting-started-guide-win">
 <span id="id2"></span><h2>유비노스 시작 안내서 (윈도우즈)<a class="headerlink" href="#technical-report-002003-ubinos-getting-started-guide-win" title="Link to this heading">¶</a></h2>
-<p>유비노스 시작 안내서 동영상:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>유비노스 유튜브 채널 (<a class="reference external" href="https://youtube.com/&#64;ubinos">https://youtube.com/&#64;ubinos</a>)</dt><dd><ul>
+<dt>유비노스 시작 안내서 동영상 채널: (<a class="reference external" href="https://youtube.com/&#64;ubinos">https://youtube.com/&#64;ubinos</a>)</dt><dd><ul>
 <li><dl class="simple">
 <dt><a class="reference external" href="https://youtube.com/playlist?list=PLrCPdTJCbmB9TwyiUClB_ze8P-u7AsCWI&amp;si=9AICUF_AUI6j8N2w">Ubinos Getting Started Guide 재생 목록</a></dt><dd><ul>
 <li><p><a class="reference external" href="https://youtu.be/CFY_Ksk_xAg">Ubinos Getting Started Guide (Windows) 동영상</a></p></li>
+<li><p><a class="reference external" href="https://youtu.be/XMzsgVgeJZc">Ubinos Library Update Guide 동영상</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -274,74 +275,75 @@
 </dd>
 </dl>
 </li>
-</ul>
-<p>유비노스 관련 문의 및 답변 페이지:</p>
-<ul class="simple">
 <li><dl class="simple">
-<dt>유비노스 깃허브 이슈 페이지: (<a class="reference external" href="https://github.com/ubinos/ubinos.issues">https://github.com/ubinos/ubinos.issues</a>)</dt><dd><ul>
+<dt>유비노스 관련 문의 및 답변 웹페이지:</dt><dd><ul>
+<li><dl class="simple">
+<dt>유비노스 깃허브 이슈 웹페이지: (<a class="reference external" href="https://github.com/ubinos/ubinos.issues">https://github.com/ubinos/ubinos.issues</a>)</dt><dd><ul>
 <li><p><a class="reference external" href="https://github.com/ubinos/ubinos.issues/issues?q=is%3Aissue">All issues</a></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
-<section id="id3">
-<h3>1. 운영체제 종속적 패키지 설치<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+</dd>
+</dl>
+</li>
+</ul>
+<br><section id="id3">
+<h3>운영체제 종속적 패키지 설치<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
 <section id="chocolatey">
-<h4>1.1. Chocolatey 설치<a class="headerlink" href="#chocolatey" title="Link to this heading">¶</a></h4>
-<ol class="arabic simple">
+<h4>Chocolatey 설치<a class="headerlink" href="#chocolatey" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
 <li><p><strong>관리자 권한으로</strong> PowerShell 실행</p></li>
-<li><p>다음 명령어 실행</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))</span>
+<li><dl>
+<dt>다음 명령어 실행</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
+</dd>
+</dl>
+</li>
 <li><p>PowerShell 창 닫기</p></li>
 </ol>
 </section>
 <section id="id4">
-<h4>1.2. 필요한 패키지 설치<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h4>
-<ol class="arabic simple">
+<h4>필요한 패키지 설치<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
 <li><p><strong>관리자 권한으로</strong> 명령 프롬프트(cmd.exe) 실행</p></li>
-<li><p>다음 명령어 실행해 필요한 패키지 설치</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">choco feature enable -n allowGlobalConfirmation</span>
+<li><dl>
+<dt>다음 명령어 실행해 필요한 패키지 설치</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">choco feature enable -n allowGlobalConfirmation</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">choco install ninja make gperf git dtc-msys2 wget 7zip python311 python3-virtualenv cmake qemu</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
+</dd>
+</dl>
+</li>
 <li><p><strong>명령 프롬프트(cmd.exe) 창 닫기</strong></p></li>
-<li><p>시스템 변수의 PATH에 다음 경로를 추가한다.</p></li>
-</ol>
-<ul class="simple">
+<li><dl>
+<dt>시스템 변수의 PATH에 다음 경로를 추가한다.</dt><dd><ul>
 <li><dl class="simple">
-<dt>시스템 변수의 PATH 설정 메뉴</dt><dd><ul>
+<dt>시스템 변수의 PATH 설정 메뉴</dt><dd><ul class="simple">
 <li><p>윈도우 설정 -&gt; 시스템 -&gt; 정보 -&gt; 고급 시스템 설정 -&gt; 환경 변수 -&gt; 시스템 변수 -&gt; Path</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>추가할 경로</p></li>
-</ul>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Program Files\qemu
+<li><dl>
+<dt>추가할 경로</dt><dd><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Program Files\qemu
 </pre></div>
 </div>
+</dd>
+</dl>
+</li>
+</ul>
 <p><a class="reference internal" href="#figure-002002-ubinos-env-path-setting-win"><span class="std std-numref">그림 2</span></a> 은 경로 설정 예를 보여준다.</p>
-<figure class="align-center" id="id34">
-<span id="figure-002002-ubinos-env-path-setting-win"></span><a class="reference internal image-reference" href="_images/figure_002002_ubinos_env_path_setting_win.png"><img alt="Ubinos Env. Path Setting for Windows 11" src="_images/figure_002002_ubinos_env_path_setting_win.png" style="width: 90%;" />
-</a>
-<figcaption>
-<p><span class="caption-number">그림 2 </span><span class="caption-text">Ubinos Env. Path Setting for Windows 11</span><a class="headerlink" href="#id34" title="Link to this image">¶</a></p>
-</figcaption>
-</figure>
-<ol class="arabic simple" start="5">
+</dd>
+</dl>
+</li>
 <li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행</p></li>
-<li><p>다음 명령을 수행해 git 사용자 이름과 이메일 설정</p></li>
-</ol>
-<div class="admonition note">
+<li><dl>
+<dt>다음 명령을 수행해 git 사용자 이름과 이메일 설정</dt><dd><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>“Your Name”과 “<a class="reference external" href="mailto:your-email&#37;&#52;&#48;example&#46;com">your-email<span>&#64;</span>example<span>&#46;</span>com</a>”을 본인의 이름과 이메일로 변경해서 실행해야 합니다.</p>
 </div>
@@ -349,43 +351,54 @@
 <span class="go">git config --global user.email &quot;your-email@example.com&quot;</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="7">
+</dd>
+</dl>
+</li>
 <li><p>명령 프롬프트(cmd.exe) 창 닫기</p></li>
 </ol>
-</section>
+<br><figure class="align-center" id="id38">
+<span id="figure-002002-ubinos-env-path-setting-win"></span><a class="reference internal image-reference" href="_images/figure_002002_ubinos_env_path_setting_win.png"><img alt="Ubinos Env. Path Setting for Windows 11" src="_images/figure_002002_ubinos_env_path_setting_win.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">그림 2 </span><span class="caption-text">Ubinos Env. Path Setting for Windows 11</span><a class="headerlink" href="#id38" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<br></section>
 </section>
 <section id="ssh-key-github">
-<h3>2. ssh key 생성 및 github에 등록<a class="headerlink" href="#ssh-key-github" title="Link to this heading">¶</a></h3>
+<h3>SSH key 생성 및 github에 등록<a class="headerlink" href="#ssh-key-github" title="Link to this heading">¶</a></h3>
 <section id="ssh-key">
-<h4>2.1. ssh key 생성<a class="headerlink" href="#ssh-key" title="Link to this heading">¶</a></h4>
-<ol class="arabic simple">
+<h4>SSH key 생성<a class="headerlink" href="#ssh-key" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
 <li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행</p></li>
-<li><p>다음 명령어를 실행해 ssh key를 생성</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh-keygen -t rsa -b 4096</span>
+<li><dl>
+<dt>다음 명령어를 실행해 ssh key를 생성</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh-keygen -t rsa -b 4096</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>file을 입력하라는 메시지가 나오면 엔터를 눌러 기본값을 선택합니다.</p></li>
 <li><p>passphrase를 입력하라는 메시지가 나오면 엔터를 눌러 no passphrase를 선택합니다.</p></li>
 </ul>
-<ol class="arabic simple" start="3">
-<li><p>다음 명령어를 실행해 생성한 공개키를 클립보드에 복사</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">type %USERPROFILE%\.ssh\id_rsa.pub | clip</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령어를 실행해 생성한 공개키를 클립보드에 복사</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">type %USERPROFILE%\.ssh\id_rsa.pub | clip</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>file을 기본값인 id_rsa가 아닌 다른 것을 선택했다면 해당 file로 변경해서 실행해야 합니다.</p></li>
 </ul>
-<ol class="arabic simple" start="4">
+</dd>
+</dl>
+</li>
 <li><p>명령 프롬프트(cmd.exe) 창 닫기</p></li>
 </ol>
 </section>
-<section id="github">
-<h4>2.2. 생성한 공개키를 github에 등록<a class="headerlink" href="#github" title="Link to this heading">¶</a></h4>
+<section id="ssh-github">
+<h4>생성한 SSH 공개키를 github에 등록<a class="headerlink" href="#ssh-github" title="Link to this heading">¶</a></h4>
 <ol class="arabic simple">
-<li><p>웹브라우저로 <a class="reference external" href="https://github.com">https://github.com</a> 에 접속한한 후, 로그인</p></li>
+<li><p>웹브라우저에서 <a class="reference external" href="https://github.com">https://github.com</a> 에 접속한한 후, 로그인</p></li>
 <li><p>오른쪽 상단의 프로필 사진을 클릭한 후, Settings 클릭</p></li>
 <li><p>좌측 메뉴에서 SSH and GPG keys 클릭</p></li>
 <li><p>New SSH key 클릭</p></li>
@@ -393,69 +406,81 @@
 <li><p>Key에 복사한 공개키를 붙여넣기</p></li>
 <li><p>Add SSH key 클릭</p></li>
 </ol>
-</section>
+<br></section>
 </section>
 <section id="id5">
-<h3>3. 유비노스 소스트리 다운로드 및 개발용 가상환경 생성<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<h3>유비노스 소스트리 다운로드 및 개발용 가상환경 생성<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
 <section id="id6">
-<h4>3.1. 유비노스 소스트리 다운로드<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h4>
-<ol class="arabic simple">
+<h4>유비노스 소스트리 다운로드<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
 <li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행</p></li>
-<li><p>다음 명령을 실행해 작업용 디렉토리 생성 후 해당 디렉토리로 이동</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir C:\MyWorks\ubinos</span>
+<li><dl>
+<dt>다음 명령을 실행해 작업용 디렉토리 생성 후 해당 디렉토리로 이동</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir C:\MyWorks\ubinos</span>
 <span class="go">cd C:\MyWorks\ubinos</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>다음 명령어를 실행해 유비노스 소스트리 다운로드 후 해당 디렉토리로 이동</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/ubinos/ubiworks.git</span>
-<span class="go">cd ubiworks</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령어를 실행해 유비노스 소스트리 다운로드</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/ubinos/ubiworks.git</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>다음 명령어를 실행해 유비노스 소스트리 서브모듈 다운로드</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git submodule update --init</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령어를 실행해 다운로드한 유비노스 소스트리 디렉토리로 이동</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ubiworks</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령어를 실행해 유비노스 소스트리 서브모듈 다운로드</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git submodule update --init</span>
 <span class="go">git submodule foreach git switch ubinos-main</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
+</dd>
+</dl>
+</li>
 <li><p>명령 프롬프트(cmd.exe) 창 닫기</p></li>
 </ol>
 </section>
 <section id="id7">
-<h4>3.2. 개발용 가상환경 생성<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h4>
-<ol class="arabic simple">
+<h4>개발용 가상환경 생성<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
 <li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행</p></li>
-<li><p>다음 명령을 실행해 유비노스 소스트리 make 디렉토리로 이동</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd C:\MyWorks\ubinos\ubiworks\make</span>
+<li><dl>
+<dt>다음 명령을 실행해 유비노스 소스트리 make 디렉토리로 이동</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd C:\MyWorks\ubinos\ubiworks\make</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>다음 명령을 실행해 “Ubinos config selecgtor”를 실행</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xsel</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 실행해 “Ubinos config selecgtor”를 실행</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xsel</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>“Ubinos config selecgtor” 창이 뜨면 다음을  선택한 후 Select 버튼을 클릭</p></li>
-</ol>
-<ul class="simple">
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“Ubinos config selecgtor” 창이 뜨면 다음을 선택한 후 Select 버튼을 클릭</dt><dd><ul class="simple">
 <li><p>ubinos project의 ubinos_venv</p></li>
 </ul>
-<ol class="arabic simple" start="5">
-<li><p>다음 명령을 실행해 빌드</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make rebuildd</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 실행해 빌드</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make rebuildd</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="6">
-<li><p>빌드가 정상적으로 완료되면 다름과 같이 가상환경 활성화, 비활성화 명령이 출력됨</p></li>
-</ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;&quot;
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>빌드가 정상적으로 완료되면 다름과 같이 가상환경 활성화, 비활성화 명령이 출력됨</dt><dd><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;&quot;
 &quot;* env activate command: &quot;
 &quot;C:\MyWorks\ubinos\ubiworks\output\ubinos_venv\Scripts\activate.bat&quot;
 &quot;&quot;
@@ -464,93 +489,114 @@
 &quot;&quot;
 </pre></div>
 </div>
-<ol class="arabic simple" start="7">
-<li><p>가상환경 활성화 명령을 실행해 ubinos_venv 활성화</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\MyWorks\ubinos\ubiworks\output\ubinos_venv\Scripts\activate.bat</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>가상환경 활성화 명령을 실행해 ubinos_venv 활성화</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\MyWorks\ubinos\ubiworks\output\ubinos_venv\Scripts\activate.bat</span>
 </pre></div>
 </div>
-<p>위 명령처럼 절대경로로 실행해도 되지만, 아래 명령처럼 상대경로로 실행해도 됩니다.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">..\output\ubinos_venv\Scripts\activate.bat</span>
+<ul>
+<li><dl>
+<dt>위 명령처럼 절대경로로 실행해도 되지만, 아래 명령처럼 상대경로로 실행해도 됩니다.</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">..\output\ubinos_venv\Scripts\activate.bat</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="7">
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 <li><p>명령 프롬프트(cmd.exe) 창 닫기</p></li>
 </ol>
-</section>
+<br></section>
 </section>
 <section id="vscode">
-<h3>4. VSCode 설치<a class="headerlink" href="#vscode" title="Link to this heading">¶</a></h3>
+<h3>VSCode 설치<a class="headerlink" href="#vscode" title="Link to this heading">¶</a></h3>
 <ol class="arabic simple">
-<li><p>웹브라우저로 다음 URL에 접속해, VSCode를 다운로드 및 설치</p></li>
-</ol>
-<ul class="simple">
+<li><dl class="simple">
+<dt>웹브라우저로 다음 URL에 접속해, VSCode를 다운로드 및 설치</dt><dd><ul class="simple">
 <li><p><a class="reference external" href="https://code.visualstudio.com">https://code.visualstudio.com</a></p></li>
 </ul>
-</section>
-<section id="gnu-arm-embedded-toolchain">
-<h3>5. GNU ARM Embedded Toolchain 설치<a class="headerlink" href="#gnu-arm-embedded-toolchain" title="Link to this heading">¶</a></h3>
-<ol class="arabic simple">
-<li><p>웹브라우저로 다음 URL에 접속해, gcc-arm-none-eabi-10.3-2021.10-win32.exe를 다운로드 및 설치</p></li>
+</dd>
+</dl>
+</li>
 </ol>
-<ul class="simple">
+<br></section>
+<section id="gnu-arm-embedded-toolchain">
+<h3>GNU ARM Embedded Toolchain 설치<a class="headerlink" href="#gnu-arm-embedded-toolchain" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><dl>
+<dt>웹브라우저로 다음 URL에 접속해, gcc-arm-none-eabi-10.3-2021.10-win32.exe를 다운로드 및 설치</dt><dd><ul class="simple">
 <li><p><a class="reference external" href="https://developer.arm.com/downloads/-/gnu-rm">https://developer.arm.com/downloads/-/gnu-rm</a></p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>설치 완료 창이 뜨면 “Add path to environment variable”을 반드시 체크 하고 마침 버튼을 눌려야 합니다.</p>
 </div>
-</section>
+</dd>
+</dl>
+</li>
+</ol>
+<br></section>
 <section id="technical-report-002003-ubinos-getting-started-guide-win-open-ubinsos-source-tree-with-vscode">
-<span id="id8"></span><h3>6. VSCode로 유비노스 소스트리 열기<a class="headerlink" href="#technical-report-002003-ubinos-getting-started-guide-win-open-ubinsos-source-tree-with-vscode" title="Link to this heading">¶</a></h3>
-<ol class="arabic simple">
+<span id="id8"></span><h3>VSCode로 유비노스 소스트리 열기<a class="headerlink" href="#technical-report-002003-ubinos-getting-started-guide-win-open-ubinsos-source-tree-with-vscode" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
 <li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행</p></li>
-<li><p>다음 명령을 실행해 유비노스 소스트리 make 디렉토리로 이동</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd C:\MyWorks\ubinos\ubiworks\make</span>
+<li><dl>
+<dt>다음 명령을 실행해 유비노스 소스트리 make 디렉토리로 이동</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd C:\MyWorks\ubinos\ubiworks\make</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>다음 명령을 실행해 유비노스 개발용 가상환경 활성화</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">..\output\ubinos_venv\Scripts\activate.bat</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 실행해 유비노스 개발용 가상환경 활성화</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">..\output\ubinos_venv\Scripts\activate.bat</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>다음 명령을 실행해 VSCode로 유비노스 소스트리 열기</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">code ..</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 실행해 VSCode로 유비노스 소스트리 열기</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">code ..</span>
 </pre></div>
 </div>
-</section>
+</dd>
+</dl>
+</li>
+</ol>
+<br></section>
 <section id="vscode-hello-world">
-<span id="technical-report-002003-ubinos-getting-started-guide-win-select-and-build-hello-world-example"></span><h3>7. VSCode로 유비노스 hello_world 예제 선택, 빌드<a class="headerlink" href="#vscode-hello-world" title="Link to this heading">¶</a></h3>
+<span id="technical-report-002003-ubinos-getting-started-guide-win-select-and-build-hello-world-example"></span><h3>VSCode로 유비노스 hello_world 예제 선택, 빌드<a class="headerlink" href="#vscode-hello-world" title="Link to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
 </div>
-<ol class="arabic simple">
-<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 “Ubinos config selecgtor”를 실행</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xsel</span>
+<ol class="arabic">
+<li><dl>
+<dt>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 “Ubinos config selecgtor”를 실행</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xsel</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>“Ubinos config selecgtor” 창이 뜨면 다음을  선택한 후 Select 버튼을 클릭</p></li>
-</ol>
-<ul class="simple">
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“Ubinos config selecgtor” 창이 뜨면 다음을 선택한 후 Select 버튼을 클릭</dt><dd><ul class="simple">
 <li><p>ubinos project의 hello_world_netduinoplus2_qemu</p></li>
 </ul>
-<ol class="arabic simple" start="3">
-<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make rebuildd</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make rebuildd</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>빌드가 정상적으로 완료되면 다름과 같이 빌드 정보가 출력됨</p></li>
-</ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[100%] Linking C executable app.elf
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>빌드가 정상적으로 완료되면 다름과 같이 빌드 정보가 출력됨</dt><dd><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[100%] Linking C executable app.elf
 
 
 entry address                = 0x0800043c (   134218812)
@@ -600,38 +646,49 @@ make[1]: Leaving directory &#39;C:/MyWorks/ubinos/ubiworks/output/hello_world_ne
 &quot;&quot;
 </pre></div>
 </div>
-</section>
+</dd>
+</dl>
+</li>
+</ol>
+<br></section>
 <section id="technical-report-002003-ubinos-getting-started-guide-win-run-hello-world-example">
-<span id="id9"></span><h3>8. VSCode로 유비노스 hello_world 예제 실행<a class="headerlink" href="#technical-report-002003-ubinos-getting-started-guide-win-run-hello-world-example" title="Link to this heading">¶</a></h3>
+<span id="id9"></span><h3>VSCode로 유비노스 hello_world 예제 실행<a class="headerlink" href="#technical-report-002003-ubinos-getting-started-guide-win-run-hello-world-example" title="Link to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
 </div>
-<ol class="arabic simple">
-<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드된 elf 파일을 load</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make load</span>
+<ol class="arabic">
+<li><dl>
+<dt>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드된 elf 파일을 load</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make load</span>
 </pre></div>
 </div>
-<p>정상적으로 load가 완료되면 QEMU과, qemu-system-arm 창이 나타납니다.</p>
-<ol class="arabic simple" start="2">
-<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 load된 elf 파일을 실행</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xrun</span>
-</pre></div>
-</div>
-<p>정상적으로 실행되면 arm-none-eabi-gdb 창이 뜨고, qemu-system-arm 창에 hello world 메시지가 출력됩니다.</p>
-</section>
-<section id="id10">
-<h3>9. VSCode로 디버깅하기 위해 필요한 확장 프로그램 설치 및 설정<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
-</div>
-<ol class="arabic simple">
-<li><p>VSCode에서 “Extensions” View를 선택한 후, 다음 확장 프로그램을 설치</p></li>
-</ol>
 <ul class="simple">
+<li><p>정상적으로 load가 완료되면 QEMU과, qemu-system-arm 창이 나타납니다.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 load된 elf 파일을 실행</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xrun</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>정상적으로 실행되면 arm-none-eabi-gdb 창이 뜨고, qemu-system-arm 창에 hello world 메시지가 출력됩니다.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<br></section>
+<section id="id10">
+<h3>VSCode로 디버깅하기 위해 필요한 확장 프로그램 설치 및 설정<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
+</div>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>VSCode에서 “Extensions” View를 선택한 후, 다음 확장 프로그램을 설치</dt><dd><ul class="simple">
 <li><p>C/C++ (by Microsoft)</p></li>
 <li><p>C/C++ Themes (by Microsoft)</p></li>
 <li><p>C/C++ Extension Pack (by Microsoft)</p></li>
@@ -644,46 +701,79 @@ make[1]: Leaving directory &#39;C:/MyWorks/ubinos/ubiworks/output/hello_world_ne
 <li><p>CMake Tools (by Microsoft)</p></li>
 <li><p>Makefile Tools (by Microsoft)</p></li>
 </ul>
-<ol class="arabic simple" start="2">
-<li><p>다음 확장 프로그램을 비활성화</p></li>
-</ol>
-<ul class="simple">
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>다음 확장 프로그램을 비활성화</dt><dd><ul class="simple">
 <li><p>CMake Tools (by Microsoft)</p></li>
 <li><p>Makefile Tools (by Microsoft)</p></li>
 </ul>
-</section>
+</dd>
+</dl>
+</li>
+</ol>
+<br></section>
 <section id="technical-report-002003-ubinos-getting-started-guide-win-debugging-hello-world-example-with-vscode">
-<span id="id11"></span><h3>10. VSCode로 유비노스 hello_world 예제 실행 및 디버깅<a class="headerlink" href="#technical-report-002003-ubinos-getting-started-guide-win-debugging-hello-world-example-with-vscode" title="Link to this heading">¶</a></h3>
+<span id="id11"></span><h3>VSCode로 유비노스 hello_world 예제 실행 및 디버깅<a class="headerlink" href="#technical-report-002003-ubinos-getting-started-guide-win-debugging-hello-world-example-with-vscode" title="Link to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
 </div>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>VSCode에서 “Run and Debug” View를 선택한 후, “Run and debug” 구성으로 “ARM Target (build load)”을 선택</p></li>
 <li><p>“F5” 키를 눌러 “Start Debugging” 명령 실행</p></li>
-<li><p>VSCode의 Breakpoints 창으로 마우스를 옮기면 나타나는 “+” 버튼을 누른 후, 다음을 입력해 main, appmain 함수 symbol에 breakpoint를 설정</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">main</span>
+<li><dl>
+<dt>VSCode의 Breakpoints 창으로 마우스를 옮기면 나타나는 “+” 버튼을 누른 후, 다음을 입력해 main, appmain 함수 symbol에 breakpoint를 설정</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">main</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">appmain</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
+</dd>
+</dl>
+</li>
 <li><p>다시 “F5” 키를 눌러 “Continue” 명령 실행</p></li>
+</ol>
+<br></section>
+<section id="technical-report-002003-ubinos-getting-started-guide-win-update-ubinos-libraries">
+<span id="id12"></span><h3>유비노스 라이브러리 업데이트<a class="headerlink" href="#technical-report-002003-ubinos-getting-started-guide-win-update-ubinos-libraries" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://youtu.be/XMzsgVgeJZc">Ubinos Library Update Guide 동영상</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
+</div>
+<ol class="arabic">
+<li><dl>
+<dt>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 “Ubinos library manager”를 실행</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xmgr</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p>“Ubinos library manager” 창이 뜨면 “Hide ubinos default library list” 체크</p></li>
+<li><p>“Fetch and check for update all” 버튼 클릭</p></li>
+<li><p>“Done” 메시지가 뜨면 “OK” 버튼 클릭</p></li>
+<li><p><strong>Update 가능한 library 는 “U” 항목이 “O” 로 표시됨</strong></p></li>
+<li><p>Update 가능한 library 가 있으면, 선택 후 “Update” 버튼 클릭</p></li>
+<li><p>“Update library commands” 창이 뜨면 “Run” 버튼 클릭</p></li>
+<li><p>“Success” 메시지가 뜨면 “OK” 버튼 클릭</p></li>
+<li><p>“Update library commands” 창의 “Close” 버튼 클릭, “Ubinos library manager” 창의 “Close” 버튼 클릭을 차례로 클릭</p></li>
 </ol>
 <br><hr class="docutils" />
 </section>
 </section>
 <section id="technical-report-002004-ubinos-getting-started-guide-linux">
-<span id="id12"></span><h2>유비노스 시작 안내서 (리눅스)<a class="headerlink" href="#technical-report-002004-ubinos-getting-started-guide-linux" title="Link to this heading">¶</a></h2>
-<p>유비노스 시작 안내서 동영상:</p>
+<span id="id14"></span><h2>유비노스 시작 안내서 (리눅스)<a class="headerlink" href="#technical-report-002004-ubinos-getting-started-guide-linux" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><dl class="simple">
-<dt>유비노스 유튜브 채널 (<a class="reference external" href="https://youtube.com/&#64;ubinos">https://youtube.com/&#64;ubinos</a>)</dt><dd><ul>
+<dt>유비노스 시작 안내서 동영상 채널: (<a class="reference external" href="https://youtube.com/&#64;ubinos">https://youtube.com/&#64;ubinos</a>)</dt><dd><ul>
 <li><dl class="simple">
 <dt><a class="reference external" href="https://youtube.com/playlist?list=PLrCPdTJCbmB9TwyiUClB_ze8P-u7AsCWI&amp;si=9AICUF_AUI6j8N2w">Ubinos Getting Started Guide 재생 목록</a></dt><dd><ul>
 <li><p><a class="reference external" href="https://youtu.be/V5KRwOgPKRU">Ubinos Getting Started Guide (Linux) 동영상</a></p></li>
+<li><p><a class="reference external" href="https://youtu.be/XMzsgVgeJZc">Ubinos Library Update Guide 동영상</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -692,26 +782,28 @@ make[1]: Leaving directory &#39;C:/MyWorks/ubinos/ubiworks/output/hello_world_ne
 </dd>
 </dl>
 </li>
-</ul>
-<p>유비노스 관련 문의 및 답변 페이지:</p>
-<ul class="simple">
 <li><dl class="simple">
-<dt>유비노스 깃허브 이슈 페이지: (<a class="reference external" href="https://github.com/ubinos/ubinos.issues">https://github.com/ubinos/ubinos.issues</a>)</dt><dd><ul>
+<dt>유비노스 관련 문의 및 답변 웹페이지:</dt><dd><ul>
+<li><dl class="simple">
+<dt>유비노스 깃허브 이슈 웹페이지: (<a class="reference external" href="https://github.com/ubinos/ubinos.issues">https://github.com/ubinos/ubinos.issues</a>)</dt><dd><ul>
 <li><p><a class="reference external" href="https://github.com/ubinos/ubinos.issues/issues?q=is%3Aissue">All issues</a></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
-<section id="id17">
-<h3>1. 운영체제 종속적 패키지 설치<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
-<section id="id18">
-<h4>1.1. 필요한 패키지 설치<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h4>
-<ol class="arabic simple">
+</dd>
+</dl>
+</li>
+</ul>
+<br><section id="id20">
+<h3>운영체제 종속적 패키지 설치<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
+<section id="id21">
+<h4>필요한 패키지 설치<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
 <li><p>터미널 실행</p></li>
-<li><p>다음 명령어 실행해 필요한 패키지 설치</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt update</span>
+<li><dl>
+<dt>다음 명령어 실행해 필요한 패키지 설치</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt update</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev bc bzip2 -y</span>
@@ -721,10 +813,11 @@ make[1]: Leaving directory &#39;C:/MyWorks/ubinos/ubiworks/output/hello_world_ne
 <span class="go">sudo apt install qemu-system -y</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>다음 명령을 수행해 git 사용자 이름과 이메일 설정</p></li>
-</ol>
-<div class="admonition note">
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 수행해 git 사용자 이름과 이메일 설정</dt><dd><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>“Your Name”과 “<a class="reference external" href="mailto:your-email&#37;&#52;&#48;example&#46;com">your-email<span>&#64;</span>example<span>&#46;</span>com</a>”을 본인의 이름과 이메일로 변경해서 실행해야 합니다.</p>
 </div>
@@ -732,43 +825,47 @@ make[1]: Leaving directory &#39;C:/MyWorks/ubinos/ubiworks/output/hello_world_ne
 <span class="go">git config --global user.email &quot;your-email@example.com&quot;</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
+</dd>
+</dl>
+</li>
 <li><p>터미널 창 닫기</p></li>
 </ol>
+<br></section>
 </section>
-</section>
-<section id="id19">
-<h3>2. ssh key 생성 및 github에 등록<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
-<section id="id20">
-<h4>2.1. ssh key 생성<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h4>
-<ol class="arabic simple">
+<section id="id22">
+<h3>SSH key 생성 및 github에 등록<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h3>
+<section id="id23">
+<h4>SSH key 생성<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
 <li><p>터미널 실행</p></li>
-<li><p>다음 명령어를 실행해 ssh key를 생성</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh-keygen -t rsa -b 4096</span>
+<li><dl>
+<dt>다음 명령어를 실행해 ssh key를 생성</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh-keygen -t rsa -b 4096</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>file을 입력하라는 메시지가 나오면 엔터를 눌러 기본값을 선택합니다.</p></li>
 <li><p>passphrase를 입력하라는 메시지가 나오면 엔터를 눌러 no passphrase를 선택합니다.</p></li>
 </ul>
-<ol class="arabic simple" start="3">
-<li><p>다음 명령어를 실행해 생성한 공개키를 클립보드에 복사</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cat ~/.ssh/id_rsa.pub | xclip -selection clipboard</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령어를 실행해 생성한 공개키를 클립보드에 복사</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cat ~/.ssh/id_rsa.pub | xclip -selection clipboard</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>file을 기본값인 id_rsa가 아닌 다른 것을 선택했다면 해당 file로 변경해서 실행해야 합니다.</p></li>
 </ul>
-<ol class="arabic simple" start="4">
+</dd>
+</dl>
+</li>
 <li><p>터미널 창 닫기</p></li>
 </ol>
 </section>
-<section id="id21">
-<h4>2.2. 생성한 공개키를 github에 등록<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h4>
+<section id="id24">
+<h4>생성한 SSH 공개키를 github에 등록<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h4>
 <ol class="arabic simple">
-<li><p>웹브라우저로 <a class="reference external" href="https://github.com">https://github.com</a> 에 접속한한 후, 로그인</p></li>
+<li><p>웹브라우저에서 <a class="reference external" href="https://github.com">https://github.com</a> 에 접속한한 후, 로그인</p></li>
 <li><p>오른쪽 상단의 프로필 사진을 클릭한 후, Settings 클릭</p></li>
 <li><p>좌측 메뉴에서 SSH and GPG keys 클릭</p></li>
 <li><p>New SSH key 클릭</p></li>
@@ -776,69 +873,81 @@ make[1]: Leaving directory &#39;C:/MyWorks/ubinos/ubiworks/output/hello_world_ne
 <li><p>Key에 복사한 공개키를 붙여넣기</p></li>
 <li><p>Add SSH key 클릭</p></li>
 </ol>
+<br></section>
 </section>
-</section>
-<section id="id23">
-<h3>3. 유비노스 소스트리 다운로드 및 개발용 가상환경 생성<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h3>
-<section id="id24">
-<h4>3.1. 유비노스 소스트리 다운로드<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h4>
-<ol class="arabic simple">
+<section id="id26">
+<h3>유비노스 소스트리 다운로드 및 개발용 가상환경 생성<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
+<section id="id27">
+<h4>유비노스 소스트리 다운로드<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
 <li><p>터미널 실행</p></li>
-<li><p>다음 명령을 실행해 작업용 디렉토리 생성 후 해당 디렉토리로 이동</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/Workspace/ubinos</span>
+<li><dl>
+<dt>다음 명령을 실행해 작업용 디렉토리 생성 후 해당 디렉토리로 이동</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/Workspace/ubinos</span>
 <span class="go">cd ~/Workspace/ubinos</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>다음 명령어를 실행해 유비노스 소스트리 다운로드 후 해당 디렉토리로 이동</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/ubinos/ubiworks.git</span>
-<span class="go">cd ubiworks</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령어를 실행해 유비노스 소스트리 다운로드</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/ubinos/ubiworks.git</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>다음 명령어를 실행해 유비노스 소스트리 서브모듈 다운로드</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git submodule update --init</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령어를 실행해 다운로드한 유비노스 소스트리 디렉토리로 이동</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ubiworks</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령어를 실행해 유비노스 소스트리 서브모듈 다운로드</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git submodule update --init</span>
 <span class="go">git submodule foreach git switch ubinos-main</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
+</dd>
+</dl>
+</li>
 <li><p>터미널 창 닫기</p></li>
 </ol>
 </section>
-<section id="id25">
-<h4>3.2. 개발용 가상환경 생성<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h4>
-<ol class="arabic simple">
+<section id="id28">
+<h4>개발용 가상환경 생성<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h4>
+<ol class="arabic">
 <li><p>터미널 실행</p></li>
-<li><p>다음 명령을 실행해 유비노스 소스트리 make 디렉토리로 이동</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/Workspace/ubinos/ubiworks/make</span>
+<li><dl>
+<dt>다음 명령을 실행해 유비노스 소스트리 make 디렉토리로 이동</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/Workspace/ubinos/ubiworks/make</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>다음 명령을 실행해 “Ubinos config selecgtor”를 실행</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xsel</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 실행해 “Ubinos config selecgtor”를 실행</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xsel</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>“Ubinos config selecgtor” 창이 뜨면 다음을  선택한 후 Select 버튼을 클릭</p></li>
-</ol>
-<ul class="simple">
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“Ubinos config selecgtor” 창이 뜨면 다음을 선택한 후 Select 버튼을 클릭</dt><dd><ul class="simple">
 <li><p>ubinos project의 ubinos_venv</p></li>
 </ul>
-<ol class="arabic simple" start="5">
-<li><p>다음 명령을 실행해 빌드</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make rebuildd</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 실행해 빌드</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make rebuildd</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="6">
-<li><p>빌드가 정상적으로 완료되면 다름과 같이 가상환경 활성화, 비활성화 명령이 출력됨</p></li>
-</ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* python interpreter path:
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>빌드가 정상적으로 완료되면 다름과 같이 가상환경 활성화, 비활성화 명령이 출력됨</dt><dd><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* python interpreter path:
 /home/&lt;user name&gt;/Workspace/ubinos/ubiworks/output/ubinos_venv/bin/python
 
 * env activate command:
@@ -848,51 +957,62 @@ make[1]: Leaving directory &#39;C:/MyWorks/ubinos/ubiworks/output/hello_world_ne
 deactivate
 </pre></div>
 </div>
-<ol class="arabic simple" start="7">
-<li><p>가상환경 활성화 명령을 실행해 ubinos_venv 활성화</p></li>
-</ol>
-<div class="admonition note">
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>가상환경 활성화 명령을 실행해 ubinos_venv 활성화</dt><dd><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>&lt;user name&gt;을 본인의 사용자 이름 변경해서 실행해야 합니다.</p>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. /home/&lt;user name&gt;/Workspace/ubinos/ubiworks/output/ubinos_venv/bin/activate</span>
 </pre></div>
 </div>
-<p>위 명령처럼 절대경로로 실행해도 되지만, 아래 명령처럼 상대경로로 실행해도 됩니다.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. ../output/ubinos_venv/bin/activate</span>
+<ul>
+<li><dl>
+<dt>위 명령처럼 절대경로로 실행해도 되지만, 아래 명령처럼 상대경로로 실행해도 됩니다.</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. ../output/ubinos_venv/bin/activate</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="7">
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 <li><p>터미널 창 닫기</p></li>
 </ol>
+<br></section>
 </section>
-</section>
-<section id="id26">
-<h3>4. VSCode 설치<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
+<section id="id29">
+<h3>VSCode 설치<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h3>
 <ol class="arabic simple">
-<li><p>웹브라우저로 다음 URL에 접속해, VSCode를 다운로드 및 설치</p></li>
-</ol>
-<ul class="simple">
+<li><dl class="simple">
+<dt>웹브라우저로 다음 URL에 접속해, VSCode를 다운로드 및 설치</dt><dd><ul class="simple">
 <li><p><a class="reference external" href="https://code.visualstudio.com">https://code.visualstudio.com</a></p></li>
 </ul>
-</section>
-<section id="id28">
-<h3>5. GNU ARM Embedded Toolchain 설치<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h3>
-<ol class="arabic simple">
-<li><p>터미널 실행</p></li>
-<li><p>다음 명령을 실행해 툴체인을 다운로드</p></li>
+</dd>
+</dl>
+</li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/Downloads</span>
+<br></section>
+<section id="id31">
+<h3>GNU ARM Embedded Toolchain 설치<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>터미널 실행</p></li>
+<li><dl>
+<dt>다음 명령을 실행해 툴체인을 다운로드</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/Downloads</span>
 <span class="go">cd ~/Downloads</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>다음 명령을 실행해 툴체인을 설치</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo mkdir -p /opt/toolchain</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 실행해 툴체인을 설치</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo mkdir -p /opt/toolchain</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd /opt/toolchain</span>
@@ -904,106 +1024,122 @@ deactivate
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo ln -s gcc-arm-none-eabi-10.3-2021.10 gcc-arm-none-eabi</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>다음 명령을 실행해 그놈 편집기로 bash 설정 파일 열기</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gnome-text-editor ~/.bashrc</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 실행해 그놈 편집기로 bash 설정 파일 열기</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gnome-text-editor ~/.bashrc</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
-<li><p>bash 설정 파일 마지막 부분에 다음 내용을 추가, 저장, 후 그놈 편집기 종료</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export PATH=&quot;/opt/toolchain/gcc-arm-none-eabi/bin:$PATH&quot;</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>bash 설정 파일 마지막 부분에 다음 내용을 추가, 저장, 후 그놈 편집기 종료</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export PATH=&quot;/opt/toolchain/gcc-arm-none-eabi/bin:$PATH&quot;</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="6">
+</dd>
+</dl>
+</li>
 <li><p><strong>터미널 창 닫기 (bash 설정은 새로 여는 터미널 부터 적용됨)</strong></p></li>
 <li><p>터미널 다시 실행</p></li>
-<li><p>다음 명령을 실행</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">arm-none-eabi-gdb --version</span>
+<li><dl>
+<dt>다음 명령을 실행</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">arm-none-eabi-gdb --version</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="9">
-<li><p><strong>다음과 같은 오류가 발생하면 10, 11, 12, 13번 과정을 수행하고, 오류가 발생하지 않으면 이 과정들은 생략</strong></p></li>
-</ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>arm-none-eabi-gdb: error while loading shared libraries: libncurses.so.5: cannot open shared object file: No such file or directory
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>다음과 같은 오류가 발생하면 이후 과정을 수행하고, 오류가 발생하지 않으면 생략</strong></dt><dd><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>arm-none-eabi-gdb: error while loading shared libraries: libncurses.so.5: cannot open shared object file: No such file or directory
 </pre></div>
 </div>
-<ol class="arabic simple" start="10">
-<li><p>터미널에서 다음 명령을 실행</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/lib</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>터미널에서 다음 명령을 실행</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p ~/lib</span>
 <span class="go">ln -s /lib/x86_64-linux-gnu/libncurses.so.6 ~/lib/libncurses.so.5</span>
 <span class="go">ln -s /lib/x86_64-linux-gnu/libtinfo.so.6 ~/lib/libtinfo.so.5</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="11">
-<li><p>다음 명령을 실행해 그놈 편집기로 bash 설정 파일 열기</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gnome-text-editor ~/.bashrc</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 실행해 그놈 편집기로 bash 설정 파일 열기</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gnome-text-editor ~/.bashrc</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="12">
-<li><p>bash 설정 파일 마지막 부분에 다음 내용을 추가, 저장, 후 그놈 편집기 종료</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/lib</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>bash 설정 파일 마지막 부분에 다음 내용을 추가, 저장, 후 그놈 편집기 종료</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/lib</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="13">
+</dd>
+</dl>
+</li>
 <li><p><strong>터미널 창 닫기 (bash 설정은 새로 여는 터미널 부터 적용됨)</strong></p></li>
 </ol>
-</section>
+<br></section>
 <section id="technical-report-002004-ubinos-getting-started-guide-linux-open-ubinsos-source-tree-with-vscode">
-<span id="id29"></span><h3>6. VSCode로 유비노스 소스트리 열기<a class="headerlink" href="#technical-report-002004-ubinos-getting-started-guide-linux-open-ubinsos-source-tree-with-vscode" title="Link to this heading">¶</a></h3>
-<ol class="arabic simple">
+<span id="id32"></span><h3>VSCode로 유비노스 소스트리 열기<a class="headerlink" href="#technical-report-002004-ubinos-getting-started-guide-linux-open-ubinsos-source-tree-with-vscode" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
 <li><p>터미널 실행</p></li>
-<li><p>다음 명령을 실행해 유비노스 소스트리 make 디렉토리로 이동</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/Workspace/ubinos/ubiworks/make</span>
+<li><dl>
+<dt>다음 명령을 실행해 유비노스 소스트리 make 디렉토리로 이동</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/Workspace/ubinos/ubiworks/make</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>다음 명령을 실행해 유비노스 개발용 가상환경 활성화</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. ../output/ubinos_venv/bin/activate</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 실행해 유비노스 개발용 가상환경 활성화</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">. ../output/ubinos_venv/bin/activate</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>다음 명령을 실행해 VSCode로 유비노스 소스트리 열기</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">code ..</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>다음 명령을 실행해 VSCode로 유비노스 소스트리 열기</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">code ..</span>
 </pre></div>
 </div>
-</section>
+</dd>
+</dl>
+</li>
+</ol>
+<br></section>
 <section id="technical-report-002004-ubinos-getting-started-guide-linux-select-and-build-hello-world-example">
-<span id="id30"></span><h3>7. VSCode로 유비노스 hello_world 예제 선택, 빌드, 실행<a class="headerlink" href="#technical-report-002004-ubinos-getting-started-guide-linux-select-and-build-hello-world-example" title="Link to this heading">¶</a></h3>
+<span id="id33"></span><h3>VSCode로 유비노스 hello_world 예제 선택, 빌드, 실행<a class="headerlink" href="#technical-report-002004-ubinos-getting-started-guide-linux-select-and-build-hello-world-example" title="Link to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
 </div>
-<ol class="arabic simple">
-<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 “Ubinos config selecgtor”를 실행</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xsel</span>
+<ol class="arabic">
+<li><dl>
+<dt>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 “Ubinos config selecgtor”를 실행</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xsel</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>“Ubinos config selecgtor” 창이 뜨면 다음을  선택한 후 Select 버튼을 클릭</p></li>
-</ol>
-<ul class="simple">
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>“Ubinos config selecgtor” 창이 뜨면 다음을 선택한 후 Select 버튼을 클릭</dt><dd><ul class="simple">
 <li><p>ubinos project의 hello_world_netduinoplus2_qemu</p></li>
 </ul>
-<ol class="arabic simple" start="3">
-<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make rebuildd</span>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make rebuildd</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>빌드가 정상적으로 완료되면 다름과 같이 빌드 정보가 출력됨</p></li>
-</ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[100%] Linking C executable app.elf
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>빌드가 정상적으로 완료되면 다름과 같이 빌드 정보가 출력됨</dt><dd><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[100%] Linking C executable app.elf
 
 
 entry address                = 0x0800043c (   134218812)
@@ -1054,38 +1190,49 @@ make[1]: Leaving directory &#39;/home/&lt;user name&gt;/Workspace/ubinos/ubiwork
 ###############################################################################
 </pre></div>
 </div>
-</section>
+</dd>
+</dl>
+</li>
+</ol>
+<br></section>
 <section id="technical-report-002004-ubinos-getting-started-guide-linux-run-hello-world-example">
-<span id="id31"></span><h3>8. VSCode로 유비노스 hello_world 예제 실행<a class="headerlink" href="#technical-report-002004-ubinos-getting-started-guide-linux-run-hello-world-example" title="Link to this heading">¶</a></h3>
+<span id="id34"></span><h3>VSCode로 유비노스 hello_world 예제 실행<a class="headerlink" href="#technical-report-002004-ubinos-getting-started-guide-linux-run-hello-world-example" title="Link to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
 </div>
-<ol class="arabic simple">
-<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드된 elf 파일을 load</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make load</span>
+<ol class="arabic">
+<li><dl>
+<dt>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 빌드된 elf 파일을 load</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make load</span>
 </pre></div>
 </div>
-<p>정상적으로 load가 완료되면 QEMU과, qemu-system-arm 창이 나타납니다.</p>
-<ol class="arabic simple" start="2">
-<li><p>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 load된 elf 파일을 실행</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xrun</span>
-</pre></div>
-</div>
-<p>정상적으로 실행되면 arm-none-eabi-gdb 창이 뜨고, qemu-system-arm 창에 hello world 메시지가 출력됩니다.</p>
-</section>
-<section id="id32">
-<h3>9. VSCode로 디버깅하기 위해 필요한 확장 프로그램 설치 및 설정<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
-</div>
-<ol class="arabic simple">
-<li><p>VSCode에서 “Extensions” View를 선택한 후, 다음 확장 프로그램을 설치</p></li>
-</ol>
 <ul class="simple">
+<li><p>정상적으로 load가 완료되면 QEMU과, qemu-system-arm 창이 나타납니다.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>VSCode에서 “Run build task” 실행 후, 다음 명령을 선택해 load된 elf 파일을 실행</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make xrun</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>정상적으로 실행되면 arm-none-eabi-gdb 창이 뜨고, qemu-system-arm 창에 hello world 메시지가 출력됩니다.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<br></section>
+<section id="id35">
+<h3>VSCode로 디버깅하기 위해 필요한 확장 프로그램 설치 및 설정<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
+</div>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>VSCode에서 “Extensions” View를 선택한 후, 다음 확장 프로그램을 설치</dt><dd><ul class="simple">
 <li><p>C/C++ (by Microsoft)</p></li>
 <li><p>C/C++ Themes (by Microsoft)</p></li>
 <li><p>C/C++ Extension Pack (by Microsoft)</p></li>
@@ -1098,34 +1245,46 @@ make[1]: Leaving directory &#39;/home/&lt;user name&gt;/Workspace/ubinos/ubiwork
 <li><p>CMake Tools (by Microsoft)</p></li>
 <li><p>Makefile Tools (by Microsoft)</p></li>
 </ul>
-<ol class="arabic simple" start="2">
-<li><p>다음 확장 프로그램을 비활성화</p></li>
-</ol>
-<ul class="simple">
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>다음 확장 프로그램을 비활성화</dt><dd><ul class="simple">
 <li><p>CMake Tools (by Microsoft)</p></li>
 <li><p>Makefile Tools (by Microsoft)</p></li>
 </ul>
-</section>
+</dd>
+</dl>
+</li>
+</ol>
+<br></section>
 <section id="technical-report-002004-ubinos-getting-started-guide-linux-debugging-hello-world-example-with-vscode">
-<span id="id33"></span><h3>10. VSCode로 유비노스 hello_world 예제 실행 및 디버깅<a class="headerlink" href="#technical-report-002004-ubinos-getting-started-guide-linux-debugging-hello-world-example-with-vscode" title="Link to this heading">¶</a></h3>
+<span id="id36"></span><h3>VSCode로 유비노스 hello_world 예제 실행 및 디버깅<a class="headerlink" href="#technical-report-002004-ubinos-getting-started-guide-linux-debugging-hello-world-example-with-vscode" title="Link to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>VSCode에서 “Run build task” 등 실행, 각종 View 선택 방법은 <a class="reference internal" href="technical_reports.html#technical-report-002006-vscode-tips"><span class="std std-ref">VSCode 활용 팁</span></a> 참조</p>
 </div>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>VSCode에서 “Run and Debug” View를 선택한 후, “Run and debug” 구성으로 “ARM Target (build load)”을 선택</p></li>
 <li><p>“F5” 키를 눌러 “Start Debugging” 명령 실행</p></li>
-<li><p>VSCode의 Breakpoints 창으로 마우스를 옮기면 나타나는 “+” 버튼을 누른 후, 다음을 입력해 main, appmain 함수 symbol에 breakpoint를 설정</p></li>
-</ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">main</span>
+<li><dl>
+<dt>VSCode의 Breakpoints 창으로 마우스를 옮기면 나타나는 “+” 버튼을 누른 후, 다음을 입력해 main, appmain 함수 symbol에 breakpoint를 설정</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">main</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">appmain</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
+</dd>
+</dl>
+</li>
 <li><p>다시 “F5” 키를 눌러 “Continue” 명령 실행</p></li>
 </ol>
+</section>
+<section id="id37">
+<h3>유비노스 라이브러리 업데이트<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>유비노스 시작 안내서 (윈도우즈)의 “<a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win-update-ubinos-libraries"><span class="std std-ref">유비노스 라이브러리 업데이트</span></a>” 참조</p></li>
+</ul>
 </section>
 </section>
 </section>
@@ -1187,52 +1346,54 @@ make[1]: Leaving directory &#39;/home/&lt;user name&gt;/Workspace/ubinos/ubiwork
             <ul>
 <li><a class="reference internal" href="#">Getting started guides</a><ul>
 <li><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win">유비노스 시작 안내서 (윈도우즈)</a><ul>
-<li><a class="reference internal" href="#id3">1. 운영체제 종속적 패키지 설치</a><ul>
-<li><a class="reference internal" href="#chocolatey">1.1. Chocolatey 설치</a></li>
-<li><a class="reference internal" href="#id4">1.2. 필요한 패키지 설치</a></li>
+<li><a class="reference internal" href="#id3">운영체제 종속적 패키지 설치</a><ul>
+<li><a class="reference internal" href="#chocolatey">Chocolatey 설치</a></li>
+<li><a class="reference internal" href="#id4">필요한 패키지 설치</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ssh-key-github">2. ssh key 생성 및 github에 등록</a><ul>
-<li><a class="reference internal" href="#ssh-key">2.1. ssh key 생성</a></li>
-<li><a class="reference internal" href="#github">2.2. 생성한 공개키를 github에 등록</a></li>
+<li><a class="reference internal" href="#ssh-key-github">SSH key 생성 및 github에 등록</a><ul>
+<li><a class="reference internal" href="#ssh-key">SSH key 생성</a></li>
+<li><a class="reference internal" href="#ssh-github">생성한 SSH 공개키를 github에 등록</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id5">3. 유비노스 소스트리 다운로드 및 개발용 가상환경 생성</a><ul>
-<li><a class="reference internal" href="#id6">3.1. 유비노스 소스트리 다운로드</a></li>
-<li><a class="reference internal" href="#id7">3.2. 개발용 가상환경 생성</a></li>
+<li><a class="reference internal" href="#id5">유비노스 소스트리 다운로드 및 개발용 가상환경 생성</a><ul>
+<li><a class="reference internal" href="#id6">유비노스 소스트리 다운로드</a></li>
+<li><a class="reference internal" href="#id7">개발용 가상환경 생성</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#vscode">4. VSCode 설치</a></li>
-<li><a class="reference internal" href="#gnu-arm-embedded-toolchain">5. GNU ARM Embedded Toolchain 설치</a></li>
-<li><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win-open-ubinsos-source-tree-with-vscode">6. VSCode로 유비노스 소스트리 열기</a></li>
-<li><a class="reference internal" href="#vscode-hello-world">7. VSCode로 유비노스 hello_world 예제 선택, 빌드</a></li>
-<li><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win-run-hello-world-example">8. VSCode로 유비노스 hello_world 예제 실행</a></li>
-<li><a class="reference internal" href="#id10">9. VSCode로 디버깅하기 위해 필요한 확장 프로그램 설치 및 설정</a></li>
-<li><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win-debugging-hello-world-example-with-vscode">10. VSCode로 유비노스 hello_world 예제 실행 및 디버깅</a></li>
+<li><a class="reference internal" href="#vscode">VSCode 설치</a></li>
+<li><a class="reference internal" href="#gnu-arm-embedded-toolchain">GNU ARM Embedded Toolchain 설치</a></li>
+<li><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win-open-ubinsos-source-tree-with-vscode">VSCode로 유비노스 소스트리 열기</a></li>
+<li><a class="reference internal" href="#vscode-hello-world">VSCode로 유비노스 hello_world 예제 선택, 빌드</a></li>
+<li><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win-run-hello-world-example">VSCode로 유비노스 hello_world 예제 실행</a></li>
+<li><a class="reference internal" href="#id10">VSCode로 디버깅하기 위해 필요한 확장 프로그램 설치 및 설정</a></li>
+<li><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win-debugging-hello-world-example-with-vscode">VSCode로 유비노스 hello_world 예제 실행 및 디버깅</a></li>
+<li><a class="reference internal" href="#technical-report-002003-ubinos-getting-started-guide-win-update-ubinos-libraries">유비노스 라이브러리 업데이트</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#technical-report-002004-ubinos-getting-started-guide-linux">유비노스 시작 안내서 (리눅스)</a><ul>
-<li><a class="reference internal" href="#id17">1. 운영체제 종속적 패키지 설치</a><ul>
-<li><a class="reference internal" href="#id18">1.1. 필요한 패키지 설치</a></li>
+<li><a class="reference internal" href="#id20">운영체제 종속적 패키지 설치</a><ul>
+<li><a class="reference internal" href="#id21">필요한 패키지 설치</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id19">2. ssh key 생성 및 github에 등록</a><ul>
-<li><a class="reference internal" href="#id20">2.1. ssh key 생성</a></li>
-<li><a class="reference internal" href="#id21">2.2. 생성한 공개키를 github에 등록</a></li>
+<li><a class="reference internal" href="#id22">SSH key 생성 및 github에 등록</a><ul>
+<li><a class="reference internal" href="#id23">SSH key 생성</a></li>
+<li><a class="reference internal" href="#id24">생성한 SSH 공개키를 github에 등록</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id23">3. 유비노스 소스트리 다운로드 및 개발용 가상환경 생성</a><ul>
-<li><a class="reference internal" href="#id24">3.1. 유비노스 소스트리 다운로드</a></li>
-<li><a class="reference internal" href="#id25">3.2. 개발용 가상환경 생성</a></li>
+<li><a class="reference internal" href="#id26">유비노스 소스트리 다운로드 및 개발용 가상환경 생성</a><ul>
+<li><a class="reference internal" href="#id27">유비노스 소스트리 다운로드</a></li>
+<li><a class="reference internal" href="#id28">개발용 가상환경 생성</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id26">4. VSCode 설치</a></li>
-<li><a class="reference internal" href="#id28">5. GNU ARM Embedded Toolchain 설치</a></li>
-<li><a class="reference internal" href="#technical-report-002004-ubinos-getting-started-guide-linux-open-ubinsos-source-tree-with-vscode">6. VSCode로 유비노스 소스트리 열기</a></li>
-<li><a class="reference internal" href="#technical-report-002004-ubinos-getting-started-guide-linux-select-and-build-hello-world-example">7. VSCode로 유비노스 hello_world 예제 선택, 빌드, 실행</a></li>
-<li><a class="reference internal" href="#technical-report-002004-ubinos-getting-started-guide-linux-run-hello-world-example">8. VSCode로 유비노스 hello_world 예제 실행</a></li>
-<li><a class="reference internal" href="#id32">9. VSCode로 디버깅하기 위해 필요한 확장 프로그램 설치 및 설정</a></li>
-<li><a class="reference internal" href="#technical-report-002004-ubinos-getting-started-guide-linux-debugging-hello-world-example-with-vscode">10. VSCode로 유비노스 hello_world 예제 실행 및 디버깅</a></li>
+<li><a class="reference internal" href="#id29">VSCode 설치</a></li>
+<li><a class="reference internal" href="#id31">GNU ARM Embedded Toolchain 설치</a></li>
+<li><a class="reference internal" href="#technical-report-002004-ubinos-getting-started-guide-linux-open-ubinsos-source-tree-with-vscode">VSCode로 유비노스 소스트리 열기</a></li>
+<li><a class="reference internal" href="#technical-report-002004-ubinos-getting-started-guide-linux-select-and-build-hello-world-example">VSCode로 유비노스 hello_world 예제 선택, 빌드, 실행</a></li>
+<li><a class="reference internal" href="#technical-report-002004-ubinos-getting-started-guide-linux-run-hello-world-example">VSCode로 유비노스 hello_world 예제 실행</a></li>
+<li><a class="reference internal" href="#id35">VSCode로 디버깅하기 위해 필요한 확장 프로그램 설치 및 설정</a></li>
+<li><a class="reference internal" href="#technical-report-002004-ubinos-getting-started-guide-linux-debugging-hello-world-example-with-vscode">VSCode로 유비노스 hello_world 예제 실행 및 디버깅</a></li>
+<li><a class="reference internal" href="#id37">유비노스 라이브러리 업데이트</a></li>
 </ul>
 </li>
 </ul>
