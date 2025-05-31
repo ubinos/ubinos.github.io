@@ -21,6 +21,8 @@
 
    technical_reports
 
+   apis
+
    references
 
 .. Indices and search
