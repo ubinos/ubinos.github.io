@@ -7,3 +7,8 @@ div[class^='highlight'] pre {
     word-wrap: break-word !important;
 }
 
+ul *,
+ol * {
+  margin-left: 0.0em !important;
+}
+
