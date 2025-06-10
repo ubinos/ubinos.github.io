@@ -7,9 +7,7 @@
     유비노스 관련 문의 및 답변
     ****************************************************************
 
-    * 유비노스 깃허브 이슈 웹페이지: (`<https://github.com/ubinos/ubinos.issues/issues>`_)
-        + `All issues <https://github.com/ubinos/ubinos.issues/issues?q=is%3Aissue>`_
-
+    * 유비노스 깃허브 이슈 웹페이지: (`<https://github.com/ubinos/ubinos.issues>`_)
 
     2025년도 1학기 마이크로프로세서 강의 참고 자료
     ****************************************************************
