@@ -1,29 +1,38 @@
 .. only:: not latex
 
-   Ubinos Home
-   #####################################################################
+    Ubinos Home
+    #####################################################################
 
-   2025년도 1학기 마이크로프로세서 강의 참고 자료
-   ****************************************************************
 
-   * :ref:`technical_report_007001_how_to_use_mp_course_materials`
+    유비노스 관련 문의 및 답변
+    ****************************************************************
 
-   * :ref:`technical_report_007002_how_to_use_mp_course_private_sourcetree_win`
+    * 유비노스 깃허브 이슈 웹페이지: (`<https://github.com/ubinos/ubinos.issues/issues>`_)
+        + `All issues <https://github.com/ubinos/ubinos.issues/issues?q=is%3Aissue>`_
+
+
+    2025년도 1학기 마이크로프로세서 강의 참고 자료
+    ****************************************************************
+
+    * :ref:`technical_report_007001_how_to_use_mp_course_materials`
+
+    * :ref:`technical_report_007002_how_to_use_mp_course_private_sourcetree_win`
+
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Contents:
-   :hidden:
+    :maxdepth: 3
+    :caption: Contents:
+    :hidden:
 
-   introduction
+    introduction
 
-   getting_started_guides
+    getting_started_guides
 
-   technical_reports
+    technical_reports
 
-   apis
+    apis
 
-   references
+    references
 
 .. Indices and search
 .. #####################################################################
