@@ -30,6 +30,8 @@
 
     apis
 
+    research_groups
+
     references
 
 .. Indices and search
