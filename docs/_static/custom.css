@@ -12,3 +12,31 @@ ol * {
   margin-left: 0.0em !important;
 }
 
+/* Section 제목 간 여백 조정 - furo 테마에 맞춘 선택자 */
+h3, h4, h5, h6 {
+    scroll-margin-top: 1.5rem; /* 앵커 점프 위치 개선 */
+}
+
+/* Section title */
+article h3 {
+    margin-top: 2.0rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Subsection title */
+article h4 {
+    margin-top: 2.0rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Subsubsection title */
+article h5 {
+    margin-top: 2.0rem;
+    margin-bottom:1.5rem;
+}
+
+/* Paragraph title */
+article h6 {
+    margin-top: 2.0rem;
+    margin-bottom: 1.5rem;
+}
