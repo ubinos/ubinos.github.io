@@ -1,4 +1,7 @@
 {
-    "index": 0.009,
-    "technical_reports_007": 0.036
+    "apis": 0.008,
+    "index": 0.004,
+    "references": 0.002,
+    "technical_reports_007": 0.052,
+    "technical_reports_203": 0.04
 }

@@ -212,16 +212,17 @@
 <li class="toctree-l4"><a class="reference internal" href="#id9">개발용 가상환경 생성</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#vscode">VSCode 설치</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gnu-arm-embedded-toolchain">GNU ARM Embedded Toolchain 설치</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tr-007203-01-doc-open-ubinos-source-tree-with-vscode">VSCode로 유비노스 소스트리 열기</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vscode">VSCode 설치</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tr-007213-01-doc-open-ubinos-source-tree-with-vscode">VSCode로 유비노스 소스트리 열기</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id11">VSCode로 디버깅하기 위해 필요한 확장 프로그램 설치 및 설정</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#vscode-cmake">VSCode CMake 구성</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ubinos">Ubinos 기본 라이브러리 설치</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tr-007213-01-doc-update-ubinos-libraries">유비노스 라이브러리 업데이트</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="#tr-007222-01-ubiquitous-computing">유비쿼터스 컴퓨팅</a><input aria-label="Toggle navigation of 유비쿼터스 컴퓨팅" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id13">관련 자료</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">관련 자료</a></li>
 </ul>
 </li>
 </ul>
@@ -259,6 +260,13 @@
 <li class="toctree-l4"><a class="reference internal" href="technical_reports_203.html#id71">15주차</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="technical_reports_203.html#tr-203312-01-ece2knu2026b-how-to-use-course-materials">전공실2 강의 자료 사용법</a><input aria-label="Toggle navigation of 전공실2 강의 자료 사용법" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="technical_reports_203.html#id76">유비노스 개발 환경 설치</a></li>
+<li class="toctree-l3"><a class="reference internal" href="technical_reports_203.html#id77">전공실2 강의 자료 라이브러리 설치</a></li>
+<li class="toctree-l3"><a class="reference internal" href="technical_reports_203.html#id78">강의 자료 템플릿에서 내 보고서 생성</a></li>
+<li class="toctree-l3"><a class="reference internal" href="technical_reports_203.html#id79">강의 자료 라이브러리 업데이트</a></li>
 </ul>
 </li>
 </ul>
@@ -349,11 +357,11 @@
 </li>
 </ul>
 <p><a class="reference internal" href="#tr-007201-01-fig-007201-01"><span class="std std-numref">Figure 1</span></a> 은 유비노스 구조를 보여준다.</p>
-<br><figure class="align-center" id="id16">
+<br><figure class="align-center" id="id17">
 <span id="tr-007201-01-fig-007201-01"></span><a class="reference internal image-reference" href="_images/fig_007201_01_ubinos_architecture.png"><img alt="Ubinos architecture" src="_images/fig_007201_01_ubinos_architecture.png" style="width: 90%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 1 </span><span class="caption-text">Ubinos architecture</span><a class="headerlink" href="#id16" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Figure 1 </span><span class="caption-text">Ubinos architecture</span><a class="headerlink" href="#id17" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <br></section>
@@ -400,7 +408,7 @@
 <dt>다음 명령어 실행해 필요한 패키지 설치</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">choco feature enable -n allowGlobalConfirmation</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">choco install ninja make gperf git dtc-msys2 wget 7zip cmake python3 python311 nodejs-lts qemu</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">choco install ninja make gperf git dtc-msys2 wget 7zip cmake python3 python311 nodejs-lts qemu xpdf-utils</span>
 </pre></div>
 </div>
 </dd>
@@ -424,7 +432,7 @@
 </dl>
 </li>
 </ul>
-<p><a class="reference internal" href="#tr-007203-01-fig-007202-01"><span class="std std-numref">Figure 2</span></a> 은 경로 설정 예를 보여준다.</p>
+<p><a class="reference internal" href="#tr-007213-01-fig-007202-01"><span class="std std-numref">Figure 2</span></a> 은 경로 설정 예를 보여준다.</p>
 </dd>
 </dl>
 </li>
@@ -443,14 +451,14 @@
 </li>
 <li><p>명령 프롬프트(cmd.exe) 창 닫기</p></li>
 </ol>
-<br><figure class="align-center" id="id17">
-<span id="tr-007203-01-fig-007202-01"></span><a class="reference internal image-reference" href="_images/fig_007202_01_ubinos_env_path_setting_win.png"><img alt="Ubinos Env. Path Setting for Windows 11" src="_images/fig_007202_01_ubinos_env_path_setting_win.png" style="width: 90%;" />
+<br><figure class="align-center" id="id18">
+<span id="tr-007213-01-fig-007202-01"></span><a class="reference internal image-reference" href="_images/fig_007202_01_ubinos_env_path_setting_win.png"><img alt="Ubinos Env. Path Setting for Windows 11" src="_images/fig_007202_01_ubinos_env_path_setting_win.png" style="width: 90%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 2 </span><span class="caption-text">Ubinos Env. Path Setting for Windows 11</span><a class="headerlink" href="#id17" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Figure 2 </span><span class="caption-text">Ubinos Env. Path Setting for Windows 11</span><a class="headerlink" href="#id18" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-</section>
+<br></section>
 </section>
 <section id="id7">
 <h3>유비노스 소스트리 다운로드 및 개발용 가상환경 생성<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
@@ -494,6 +502,13 @@
 </dl>
 </li>
 <li><dl>
+<dt>다음 명령을 실행해 가상 환경에 python3 명령 추가</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">echo @python %* &gt; &quot;C:\MyWorks\ubinos\ubiworks\venv\Scripts\python3.bat&quot;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
 <dt>다음 명령을 실행해 가상 환경 활성화</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">venv\Scripts\activate</span>
 </pre></div>
 </div>
@@ -517,6 +532,49 @@
 </ol>
 <br></section>
 </section>
+<section id="gnu-arm-embedded-toolchain">
+<h3>GNU ARM Embedded Toolchain 설치<a class="headerlink" href="#gnu-arm-embedded-toolchain" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><dl>
+<dt>웹브라우저로 다음 URL에 접속해, arm-none-eabi toolchain Release 15.3.rel1 다운로드 및 설치</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://gitlab.arm.com/tooling/gnu-toolchains-for-arm">https://gitlab.arm.com/tooling/gnu-toolchains-for-arm</a></dt><dd><ul>
+<li><p><a class="reference external" href="https://gitlab.arm.com/api/v4/projects/tooling%2Fgnu-toolchains-for-arm/packages/generic/gnu-toolchain/15.3.rel1/arm-gnu-toolchain-15.3.rel1-mingw-w64-x86_64-arm-none-eabi.msi">64bit Windows 에서 동작하는 32bit Arm 용 Toolchain 다운로드 링크</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>설치 완료 창이 뜨면 “Add path to environment variable”을 반드시 체크 하고 마침 버튼을 눌려야 한다.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>시스템 변수의 PATH에 다음 경로를 추가한다.</dt><dd><ul>
+<li><dl class="simple">
+<dt>시스템 변수의 PATH 설정 메뉴</dt><dd><ul class="simple">
+<li><p>윈도우 설정 -&gt; 시스템 -&gt; 정보 -&gt; 고급 시스템 설정 -&gt; 환경 변수 -&gt; 시스템 변수 -&gt; Path</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>추가할 경로</dt><dd><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Program Files\Arm\GNU Toolchain mingw-w64-x86_64-arm-none-eabi\bin
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>명령 프롬프트(cmd.exe) 창 닫기</p></li>
+</ol>
+<br></section>
 <section id="vscode">
 <h3>VSCode 설치<a class="headerlink" href="#vscode" title="Link to this heading">¶</a></h3>
 <ol class="arabic simple">
@@ -529,24 +587,8 @@
 </li>
 </ol>
 <br></section>
-<section id="gnu-arm-embedded-toolchain">
-<h3>GNU ARM Embedded Toolchain 설치<a class="headerlink" href="#gnu-arm-embedded-toolchain" title="Link to this heading">¶</a></h3>
-<ol class="arabic">
-<li><dl>
-<dt>웹브라우저로 다음 URL에 접속해, gcc-arm-none-eabi-10.3-2021.10-win32.exe를 다운로드 및 설치</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="https://developer.arm.com/downloads/-/gnu-rm">https://developer.arm.com/downloads/-/gnu-rm</a></p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>설치 완료 창이 뜨면 “Add path to environment variable”을 반드시 체크 하고 마침 버튼을 눌려야 한다.</p>
-</div>
-</dd>
-</dl>
-</li>
-</ol>
-<br></section>
-<section id="tr-007203-01-doc-open-ubinos-source-tree-with-vscode">
-<span id="id10"></span><h3>VSCode로 유비노스 소스트리 열기<a class="headerlink" href="#tr-007203-01-doc-open-ubinos-source-tree-with-vscode" title="Link to this heading">¶</a></h3>
+<section id="tr-007213-01-doc-open-ubinos-source-tree-with-vscode">
+<span id="id10"></span><h3>VSCode로 유비노스 소스트리 열기<a class="headerlink" href="#tr-007213-01-doc-open-ubinos-source-tree-with-vscode" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p>일반 사용자 권한으로 명령 프롬프트(cmd.exe) 실행 <strong>(반드시 기존 프롬프트 창을 닫고 새 프롬르트 창을 열어야 함)</strong></p></li>
 <li><dl>
@@ -580,44 +622,53 @@
 <li><p>C/C++ (by Microsoft)</p></li>
 <li><p>C/C++ Themes (by Microsoft)</p></li>
 <li><p>C/C++ Extension Pack (by Microsoft)</p></li>
-<li><p>Python (by Microsoft)</p></li>
+<li><p>CMake Tools (by Microsoft)</p></li>
 <li><p>CodeLLDB (by Vadim Chugunov)</p></li>
 <li><p>ARM Assembly (by dan-c-underwood)</p></li>
 <li><p>MemoryView (by mcu-debug)</p></li>
-<li><p>Open (by sandcastle)</p></li>
-<li><p>CMake Tools (by Microsoft)</p></li>
 <li><p>Makefile Tools (by Microsoft)</p></li>
+<li><p>Python (by Microsoft)</p></li>
 <li><p>Jupyter (by Microsoft)</p></li>
+<li><p>Open (by sandcastle)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ol>
+<ul>
+<li><dl>
+<dt>Extensions View 검색 필터</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;C/C++&quot;</span><span class="p">,</span> <span class="s2">&quot;C/C++ Themes&quot;</span><span class="p">,</span> <span class="s2">&quot;C/C++ Extension Pack&quot;</span><span class="p">,</span> <span class="s2">&quot;CMake Tools&quot;</span><span class="p">,</span> <span class="s2">&quot;CodeLLDB&quot;</span><span class="p">,</span> <span class="s2">&quot;ARM Assembly&quot;</span><span class="p">,</span> <span class="s2">&quot;MemoryView&quot;</span><span class="p">,</span> <span class="s2">&quot;Makefile Tools&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupyter&quot;</span><span class="p">,</span> <span class="s2">&quot;Open&quot;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
 <br></section>
 <section id="vscode-cmake">
 <h3>VSCode CMake 구성<a class="headerlink" href="#vscode-cmake" title="Link to this heading">¶</a></h3>
 <ol class="arabic simple">
 <li><dl class="simple">
-<dt>다음을 참조해 VSCode로 유비노스 소스트리 열기</dt><dd><ul class="simple">
-<li><p>윈도우즈: “<a class="reference internal" href="#tr-007203-01-doc-open-ubinos-source-tree-with-vscode"><span class="std std-ref">VSCode로 유비노스 소스트리 열기</span></a>”</p></li>
+<dt>다음을 참조해 VSCode로 유비노스 소스트리 열기 (이미 열려 있있으면 이 단계는 생략)</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#tr-007213-01-doc-open-ubinos-source-tree-with-vscode"><span class="std std-ref">VSCode로 유비노스 소스트리 열기</span></a></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><p>VSCode에서 “CMake” View 선택</p></li>
 <li><dl class="simple">
-<dt>“CMake: Project Outline” 에서 “Configure All Projects” 실행 (<a class="reference internal" href="#tr-007203-01-fig-007214-01"><span class="std std-numref">Figure 3</span></a> 참고)</dt><dd><ul class="simple">
+<dt>“CMake: Project Outline” 에서 “Configure All Projects” 실행 (<a class="reference internal" href="#tr-007213-01-fig-007214-01"><span class="std std-numref">Figure 3</span></a> 참고)</dt><dd><ul class="simple">
 <li><p>VSCode 창 상단에  콤보박스가 나타나면 “Unspecified” 를 선택 (안 나타나도 계속 진행)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ol>
-<figure class="align-center" id="id18">
-<span id="tr-007203-01-fig-007214-01"></span><a class="reference internal image-reference" href="_images/fig_007214_01_ubiworks_vscode_cmake_config.png"><img alt="_images/fig_007214_01_ubiworks_vscode_cmake_config.png" src="_images/fig_007214_01_ubiworks_vscode_cmake_config.png" style="width: 100%;" />
+<figure class="align-center" id="id19">
+<span id="tr-007213-01-fig-007214-01"></span><a class="reference internal image-reference" href="_images/fig_007214_01_ubiworks_vscode_cmake_config.png"><img alt="_images/fig_007214_01_ubiworks_vscode_cmake_config.png" src="_images/fig_007214_01_ubiworks_vscode_cmake_config.png" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 3 </span><span class="caption-text">ubiworks CMake configuration</span><a class="headerlink" href="#id18" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Figure 3 </span><span class="caption-text">ubiworks CMake configuration</span><a class="headerlink" href="#id19" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -625,47 +676,76 @@
 <h3>Ubinos 기본 라이브러리 설치<a class="headerlink" href="#ubinos" title="Link to this heading">¶</a></h3>
 <ol class="arabic simple">
 <li><dl class="simple">
-<dt>다음을 참조해 VSCode로 유비노스 소스트리 열기</dt><dd><ul class="simple">
-<li><p>윈도우즈: “<a class="reference internal" href="#tr-007203-01-doc-open-ubinos-source-tree-with-vscode"><span class="std std-ref">VSCode로 유비노스 소스트리 열기</span></a>”</p></li>
+<dt>다음을 참조해 VSCode로 유비노스 소스트리 열기 (이미 열려 있있으면 이 단계는 생략)</dt><dd><ul class="simple">
+<li><p>윈도우즈: “<a class="reference internal" href="#tr-007213-01-doc-open-ubinos-source-tree-with-vscode"><span class="std std-ref">VSCode로 유비노스 소스트리 열기</span></a>”</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><p>VSCode에서 “CMake” View 선택</p></li>
-<li><p>“CMake: Project Outline” 에서 Ubinos library manager (xlm) 실행 (<a class="reference internal" href="#tr-007203-01-fig-007215-01"><span class="std std-numref">Figure 4</span></a> 참고)</p></li>
+<li><p>“CMake: Project Outline” 에서 Ubinos library manager (xlm) 실행 (<a class="reference internal" href="#tr-007213-01-fig-007215-01"><span class="std std-numref">Figure 4</span></a> 참고)</p></li>
 </ol>
-<figure class="align-center" id="id19">
-<span id="tr-007203-01-fig-007215-01"></span><a class="reference internal image-reference" href="_images/fig_007215_01_ubiworks_vscode_executing_ubinos_library_manager.png"><img alt="_images/fig_007215_01_ubiworks_vscode_executing_ubinos_library_manager.png" src="_images/fig_007215_01_ubiworks_vscode_executing_ubinos_library_manager.png" style="width: 100%;" />
+<figure class="align-center" id="id20">
+<span id="tr-007213-01-fig-007215-01"></span><a class="reference internal image-reference" href="_images/fig_007215_01_ubiworks_vscode_executing_ubinos_library_manager.png"><img alt="_images/fig_007215_01_ubiworks_vscode_executing_ubinos_library_manager.png" src="_images/fig_007215_01_ubiworks_vscode_executing_ubinos_library_manager.png" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 4 </span><span class="caption-text">Excueing Ubinos library manager</span><a class="headerlink" href="#id19" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Figure 4 </span><span class="caption-text">Excueing Ubinos library manager</span><a class="headerlink" href="#id20" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="4">
-<li><p>“Ubinos library manager” 에서 Ubinos 기본 라이브러리 (ubinos_base, ubinos) 설치 (<a class="reference internal" href="#tr-007203-01-fig-007216-01"><span class="std std-numref">Figure 5</span></a> 참고)</p></li>
+<li><p>“Ubinos library manager” 에서 Ubinos 기본 라이브러리 (ubinos_base, ubinos) 설치 (<a class="reference internal" href="#tr-007213-01-fig-007216-01"><span class="std std-numref">Figure 5</span></a> 참고)</p></li>
 </ol>
-<figure class="align-center" id="id20">
-<span id="tr-007203-01-fig-007216-01"></span><a class="reference internal image-reference" href="_images/fig_007216_01_ubinos_library_manager_install_ubinos_default_libraries.png"><img alt="_images/fig_007216_01_ubinos_library_manager_install_ubinos_default_libraries.png" src="_images/fig_007216_01_ubinos_library_manager_install_ubinos_default_libraries.png" style="width: 100%;" />
+<figure class="align-center" id="id21">
+<span id="tr-007213-01-fig-007216-01"></span><a class="reference internal image-reference" href="_images/fig_007216_01_ubinos_library_manager_install_ubinos_default_libraries.png"><img alt="_images/fig_007216_01_ubinos_library_manager_install_ubinos_default_libraries.png" src="_images/fig_007216_01_ubinos_library_manager_install_ubinos_default_libraries.png" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 5 </span><span class="caption-text">Installing Ubinos default libraries</span><a class="headerlink" href="#id20" title="Link to this image">¶</a></p>
+<p><span class="caption-number">Figure 5 </span><span class="caption-text">Installing Ubinos default libraries</span><a class="headerlink" href="#id21" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
+</section>
+<section id="tr-007213-01-doc-update-ubinos-libraries">
+<span id="id12"></span><h3>유비노스 라이브러리 업데이트<a class="headerlink" href="#tr-007213-01-doc-update-ubinos-libraries" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><dl class="simple">
+<dt>다음을 참조해 VSCode로 유비노스 소스트리 열기 (이미 열려 있있으면 이 단계는 생략)</dt><dd><ul class="simple">
+<li><p>윈도우즈: “<a class="reference internal" href="#tr-007213-01-doc-open-ubinos-source-tree-with-vscode"><span class="std std-ref">VSCode로 유비노스 소스트리 열기</span></a>”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>VSCode에서 “CMake” View 선택</p></li>
+<li><p>“CMake: Project Outline” 에서 Ubinos library manager (xlm) 실행</p></li>
+<li><p>“Ubinos library manager” “Fetch and check for update all” 버튼 클릭</p></li>
+<li><p>“Done” 메시지가 뜨면 “OK” 버튼 클릭</p></li>
+<li><dl>
+<dt><strong>Update 가능한 library 는 “U” 항목이 “O” 로 표시됨</strong></dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>“M” 항목이 “O”로 표시된 라이브러리는 로컬에서 수정된 라이브러리이기 때문에 업데이트가 불가능하다.
+업데이트 하려면 해당 라이브러리를 선택한 다음 “Reset” 버튼을 클릭해 로컬에서 수정된 내용을 삭제해야 한다.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><p>Update 가능한 library 가 있으면, 선택 후 “Update” 버튼 클릭 (<strong>없으면 이후 과정은 생략</strong>)</p></li>
+<li><p>“Update library commands” 창이 뜨면 “Run” 버튼 클릭</p></li>
+<li><p>“Success” 메시지가 뜨면 “OK” 버튼 클릭</p></li>
+<li><p>“Update library commands” 창의 “Close” 버튼 클릭, “Ubinos library manager” 창의 “Close” 버튼 클릭을 차례로 클릭</p></li>
+</ol>
 <br><hr class="docutils" />
 </section>
 </section>
 <section id="tr-007222-01-ubiquitous-computing">
-<span id="id12"></span><h2>유비쿼터스 컴퓨팅<a class="headerlink" href="#tr-007222-01-ubiquitous-computing" title="Link to this heading">¶</a></h2>
+<span id="id13"></span><h2>유비쿼터스 컴퓨팅<a class="headerlink" href="#tr-007222-01-ubiquitous-computing" title="Link to this heading">¶</a></h2>
 <p>유비쿼터스 컴퓨팅은 제록스 팰러 앨토 연구센터의 마크 와이저가 제안한 개념이다.
 마크 와이저는 이 개념을 그의 논문 “Some Computer Science Issues in Ubiquitous Computing”에서 “사용자가 현실 세계 어디에서나 컴퓨터를 사용한다는 사실을 인식하지 못한 채 사용할 수 있도록 컴퓨터를 진보시키는 방법”이라고 정의하였다.
 과거에, 이 개념 또는 이와 유사한 개념들을 언급할 때 우리나라와 일본에서는 “유비쿼터스 컴퓨팅”이라는 용어가, 미국에서는 “퍼베이시브 컴퓨팅”이라는 용어가 주로 사용되었다고 한다.
 유럽에서는 “앰비언트 인텔리전스”라는 용어가 주로 사용되었다고 한다.
 지금은 공통적으로 사물인터넷(IoT)이라는 용어가 주로 사용된다.</p>
-<br><section id="id13">
-<h3>관련 자료<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<br><section id="id14">
+<h3>관련 자료<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><dl class="simple">
-<dt><span class="bibtex-citation" id="id14">[<a class="reference internal" href="references.html#id3" title="Mark Weiser. Some computer science issues in ubiquitous computing. Communications of the ACM, 36:75-84, 1993. doi:10.1145/159544.159617.">Wei93</a>]</span> Some Computer Science Issues in Ubiquitous Computing</dt><dd><ul>
+<dt><span class="bibtex-citation" id="id15">[<a class="reference internal" href="references.html#id3" title="Mark Weiser. Some computer science issues in ubiquitous computing. Communications of the ACM, 36:75-84, 1993. doi:10.1145/159544.159617.">Wei93</a>]</span> Some Computer Science Issues in Ubiquitous Computing</dt><dd><ul>
 <li><p><a class="reference external" href="https://doi.org/10.1145/159544.159617">https://doi.org/10.1145/159544.159617</a></p></li>
 </ul>
 </dd>
@@ -772,16 +852,17 @@
 <li><a class="reference internal" href="#id9">개발용 가상환경 생성</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#vscode">VSCode 설치</a></li>
 <li><a class="reference internal" href="#gnu-arm-embedded-toolchain">GNU ARM Embedded Toolchain 설치</a></li>
-<li><a class="reference internal" href="#tr-007203-01-doc-open-ubinos-source-tree-with-vscode">VSCode로 유비노스 소스트리 열기</a></li>
+<li><a class="reference internal" href="#vscode">VSCode 설치</a></li>
+<li><a class="reference internal" href="#tr-007213-01-doc-open-ubinos-source-tree-with-vscode">VSCode로 유비노스 소스트리 열기</a></li>
 <li><a class="reference internal" href="#id11">VSCode로 디버깅하기 위해 필요한 확장 프로그램 설치 및 설정</a></li>
 <li><a class="reference internal" href="#vscode-cmake">VSCode CMake 구성</a></li>
 <li><a class="reference internal" href="#ubinos">Ubinos 기본 라이브러리 설치</a></li>
+<li><a class="reference internal" href="#tr-007213-01-doc-update-ubinos-libraries">유비노스 라이브러리 업데이트</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#tr-007222-01-ubiquitous-computing">유비쿼터스 컴퓨팅</a><ul>
-<li><a class="reference internal" href="#id13">관련 자료</a></li>
+<li><a class="reference internal" href="#id14">관련 자료</a></li>
 </ul>
 </li>
 </ul>
